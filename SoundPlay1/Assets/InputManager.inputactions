@@ -12,7 +12,7 @@
                     "expectedControlType": "MidiValue",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MidiKnob2",
@@ -150,75 +150,75 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad1",
+                    "name": "MidiPad1",
                     "type": "Button",
                     "id": "8e8d5f59-176b-42be-8bab-43f5959c004b",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad2",
+                    "name": "MidiPad2",
                     "type": "Button",
                     "id": "784ba52f-e4c7-45e0-8874-5016bcb628fb",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad3",
+                    "name": "MidiPad3",
                     "type": "Button",
                     "id": "c9f0fc3e-15d5-441a-a2bc-3f36ee99e917",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad4",
+                    "name": "MidiPad4",
                     "type": "Button",
                     "id": "50848f80-e2d1-459b-ab27-b5d2740be90e",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad5",
+                    "name": "MidiPad5",
                     "type": "Button",
                     "id": "1031e95d-d576-412a-b0cc-59b41f0fefb1",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad6",
+                    "name": "MidiPad6",
                     "type": "Button",
                     "id": "eeae0b02-65da-4261-a314-ede717bb2111",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad7",
+                    "name": "MidiPad7",
                     "type": "Button",
                     "id": "6c02c97c-b0ae-443c-a8a6-c2ccc20f6d12",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Midipad8",
+                    "name": "MidiPad8",
                     "type": "Button",
                     "id": "84eefcdd-ffb1-4684-8e1c-88f6f1c77dbc",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Tap(pressPoint=0.01)",
                     "initialStateCheck": false
                 }
             ],
@@ -406,18 +406,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad1",
+                    "action": "MidiPad1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "0b374b9a-39ce-4f3f-b3fb-bb519ed4fd1a",
-                    "path": "<MidiDevice>/note036",
+                    "path": "<MidiDevice>/note037",
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad2",
+                    "action": "MidiPad2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -428,7 +428,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad3",
+                    "action": "MidiPad3",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -439,7 +439,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad4",
+                    "action": "MidiPad4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -450,7 +450,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad5",
+                    "action": "MidiPad5",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -461,7 +461,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad6",
+                    "action": "MidiPad6",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -472,7 +472,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad7",
+                    "action": "MidiPad7",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -483,7 +483,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "MidiControl",
-                    "action": "Midipad8",
+                    "action": "MidiPad8",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
