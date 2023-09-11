@@ -1,0 +1,506 @@
+{
+    "name": "InputManager",
+    "maps": [
+        {
+            "name": "Midi",
+            "id": "3352237b-5716-4bed-ac7d-6a979c86fab6",
+            "actions": [
+                {
+                    "name": "MidiKnob1",
+                    "type": "PassThrough",
+                    "id": "7748fce2-76e3-4fe3-9070-1c3ab1eb9aad",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob2",
+                    "type": "PassThrough",
+                    "id": "e0158f48-4052-4be5-92ae-4ff727b55e81",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob3",
+                    "type": "PassThrough",
+                    "id": "10eef295-55cf-4ab3-a58d-1a740a60cb1b",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob4",
+                    "type": "PassThrough",
+                    "id": "aafe1a22-3d76-4e22-8a36-b644849cf7ff",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob5",
+                    "type": "PassThrough",
+                    "id": "535dd2b8-176c-4791-bbaa-5749ccdf34bf",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob6",
+                    "type": "PassThrough",
+                    "id": "452b6914-40cc-4b32-bc5b-09b98fa5d891",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob7",
+                    "type": "PassThrough",
+                    "id": "07a862b9-090e-4f41-98d9-d8fad7f784c5",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob8",
+                    "type": "PassThrough",
+                    "id": "94c1f9dc-d597-4a2d-8895-7473ae320459",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob9",
+                    "type": "PassThrough",
+                    "id": "304980d2-5df2-42dc-b0f7-10ba1bab889b",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob10",
+                    "type": "PassThrough",
+                    "id": "76fa8665-85e2-4363-a244-5fbc48742e1a",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob11",
+                    "type": "PassThrough",
+                    "id": "a000273a-f288-4b47-86e4-c2e63d0f4b4c",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob12",
+                    "type": "PassThrough",
+                    "id": "3ebd3531-8bfe-43e1-9aa2-5b175f19cf71",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob13",
+                    "type": "PassThrough",
+                    "id": "b6a35511-f77a-4f5a-b657-29946375fd37",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob14",
+                    "type": "PassThrough",
+                    "id": "f74ff333-2e8e-43f1-9792-b7b4017a6c9b",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob15",
+                    "type": "PassThrough",
+                    "id": "163ecb1c-c342-47d4-88a5-09418a86d294",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MidiKnob16",
+                    "type": "PassThrough",
+                    "id": "dc920ead-379b-4eee-8dee-f71a541aad80",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad1",
+                    "type": "Button",
+                    "id": "8e8d5f59-176b-42be-8bab-43f5959c004b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad2",
+                    "type": "Button",
+                    "id": "784ba52f-e4c7-45e0-8874-5016bcb628fb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad3",
+                    "type": "Button",
+                    "id": "c9f0fc3e-15d5-441a-a2bc-3f36ee99e917",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad4",
+                    "type": "Button",
+                    "id": "50848f80-e2d1-459b-ab27-b5d2740be90e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad5",
+                    "type": "Button",
+                    "id": "1031e95d-d576-412a-b0cc-59b41f0fefb1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad6",
+                    "type": "Button",
+                    "id": "eeae0b02-65da-4261-a314-ede717bb2111",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad7",
+                    "type": "Button",
+                    "id": "6c02c97c-b0ae-443c-a8a6-c2ccc20f6d12",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Midipad8",
+                    "type": "Button",
+                    "id": "84eefcdd-ffb1-4684-8e1c-88f6f1c77dbc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1bdfa550-a6a8-444a-b2e1-a397c95f1517",
+                    "path": "<MidiDevice>/control112",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5cc54a2a-7eff-4378-b226-a0d237737a43",
+                    "path": "<MidiDevice>/control074",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f4b07c55-12c3-4b90-9914-50e364e82486",
+                    "path": "<MidiDevice>/control071",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00c0461c-8a16-430b-bebe-2c2b3ce1c356",
+                    "path": "<MidiDevice>/control076",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0fc26fd3-bfa6-4376-b58e-165cef44cdd8",
+                    "path": "<MidiDevice>/control077",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ed7b924-65c9-4534-90fa-0cd6c4c9f713",
+                    "path": "<MidiDevice>/control093",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f7d657da-e88e-41fa-b06f-479015126d9f",
+                    "path": "<MidiDevice>/control073",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3710160a-5737-47f6-bf67-11c7fba7aa34",
+                    "path": "<MidiDevice>/control075",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c889c10-1878-4008-8a0b-531bcc5056ae",
+                    "path": "<MidiDevice>/control114",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob9",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "076a7a6c-695e-4fea-b404-d93f15df2be1",
+                    "path": "<MidiDevice>/control018",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob10",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16761a23-a54f-4de8-8065-bbdc29c68102",
+                    "path": "<MidiDevice>/control019",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob11",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f93d79a6-df20-4d4a-a464-6a718744fa98",
+                    "path": "<MidiDevice>/control016",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob12",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58ad48cc-b88b-419e-8f08-7dc7e531b900",
+                    "path": "<MidiDevice>/control017",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob13",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ee28c161-1e67-493e-af19-5f277aa25012",
+                    "path": "<MidiDevice>/control091",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob14",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db377627-6c94-4823-a7dd-d62ad17c543e",
+                    "path": "<MidiDevice>/control079",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob15",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fc67cdb-fa2b-4077-9bef-eeec40f2da0e",
+                    "path": "<MidiDevice>/control072",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "MidiKnob16",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06fa1785-398a-4e4b-af3b-e1e8375e51c5",
+                    "path": "<MidiDevice>/note036",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b374b9a-39ce-4f3f-b3fb-bb519ed4fd1a",
+                    "path": "<MidiDevice>/note036",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7b7535db-cf5a-408f-ba82-cc1668d1f260",
+                    "path": "<MidiDevice>/note038",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c5d1d4a-7601-4a32-945d-5d9814f6d195",
+                    "path": "<MidiDevice>/note039",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45db4fd5-db90-4d38-8246-ceb56925884e",
+                    "path": "<MidiDevice>/note040",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad5",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "20aa7a06-088e-4142-9178-403f9d20ac67",
+                    "path": "<MidiDevice>/note041",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad6",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c3ccce7-5ae9-4de9-b16d-2d25b1c23c71",
+                    "path": "<MidiDevice>/note042",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad7",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9f07e4fc-7d49-4c8b-a28b-ff93083aa8b5",
+                    "path": "<MidiDevice>/note043",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MidiControl",
+                    "action": "Midipad8",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "MidiControl",
+            "bindingGroup": "MidiControl",
+            "devices": [
+                {
+                    "devicePath": "<MidiDevice>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
