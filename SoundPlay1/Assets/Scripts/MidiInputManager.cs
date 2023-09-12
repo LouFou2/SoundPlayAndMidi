@@ -10,7 +10,7 @@ public class MidiInputManager : MonoBehaviour
     //private InputAction midiKnob1; // *** dont use knob 1 or 9
     //private InputAction midiKnob9;
 
-    private InputAction midiKnob2;
+    private InputAction midiKnob2; // The knob inputs
     private InputAction midiKnob3;
     private InputAction midiKnob4;
     private InputAction midiKnob5;
@@ -25,7 +25,8 @@ public class MidiInputManager : MonoBehaviour
     private InputAction midiKnob14;
     private InputAction midiKnob15;
     private InputAction midiKnob16;
-    private InputAction midiPad1;
+
+    private InputAction midiPad1; // The pad inputs
     private InputAction midiPad2;
     private InputAction midiPad3;
     private InputAction midiPad4;
@@ -34,6 +35,23 @@ public class MidiInputManager : MonoBehaviour
     private InputAction midiPad7;
     private InputAction midiPad8;
 
+    private InputAction keyC3; // The key inputs
+    private InputAction keyD3;
+    private InputAction keyE3;
+    private InputAction keyF3;
+    private InputAction keyG3;
+    private InputAction keyA3;
+    private InputAction keyB3;
+    private InputAction keyC4;
+    private InputAction keyD4;
+    private InputAction keyE4;
+    private InputAction keyF4;
+    private InputAction keyG4;
+    private InputAction keyA4;
+    private InputAction keyB4;
+    private InputAction keyC5;
+
+    //== Values of the inputs==//
     public float _midiKnob2Value = 0.5f;
     public float _midiKnob3Value = 0.5f;
     public float _midiKnob4Value = 0.5f;
@@ -56,6 +74,22 @@ public class MidiInputManager : MonoBehaviour
     public float _midiPad6Value = 0f;
     public float _midiPad7Value = 0f;
     public float _midiPad8Value = 0f;
+
+    public float _keyC3_Value = 0f;
+    public float _keyD3_Value = 0f;
+    public float _keyE3_Value = 0f;
+    public float _keyF3_Value = 0f;
+    public float _keyG3_Value = 0f;
+    public float _keyA3_Value = 0f;
+    public float _keyB3_Value = 0f;
+    public float _keyC4_Value = 0f;
+    public float _keyD4_Value = 0f;
+    public float _keyE4_Value = 0f;
+    public float _keyF4_Value = 0f;
+    public float _keyG4_Value = 0f;
+    public float _keyA4_Value = 0f;
+    public float _keyB4_Value = 0f;
+    public float _keyC5_Value = 0f;
 
     void Awake()
     {
@@ -83,6 +117,22 @@ public class MidiInputManager : MonoBehaviour
         midiPad7 = actions.FindActionMap("Midi").FindAction("MidiPad7");
         midiPad8 = actions.FindActionMap("Midi").FindAction("MidiPad8");
 
+        keyC3 = actions.FindActionMap("Midi").FindAction("KeyC3");
+        keyD3 = actions.FindActionMap("Midi").FindAction("KeyD3");
+        keyE3 = actions.FindActionMap("Midi").FindAction("KeyE3");
+        keyF3 = actions.FindActionMap("Midi").FindAction("KeyF3");
+        keyG3 = actions.FindActionMap("Midi").FindAction("KeyG3");
+        keyA3 = actions.FindActionMap("Midi").FindAction("KeyA3");
+        keyB3 = actions.FindActionMap("Midi").FindAction("KeyB3");
+        keyC4 = actions.FindActionMap("Midi").FindAction("KeyC4");
+        keyD4 = actions.FindActionMap("Midi").FindAction("KeyD4");
+        keyE4 = actions.FindActionMap("Midi").FindAction("KeyE4");
+        keyF4 = actions.FindActionMap("Midi").FindAction("KeyF4");
+        keyG4 = actions.FindActionMap("Midi").FindAction("KeyG4");
+        keyA4 = actions.FindActionMap("Midi").FindAction("KeyA4");
+        keyB4 = actions.FindActionMap("Midi").FindAction("KeyB4");
+        keyC5 = actions.FindActionMap("Midi").FindAction("KeyC5");
+
     }
     void OnEnable()
     {
@@ -96,7 +146,7 @@ public class MidiInputManager : MonoBehaviour
 
     void Update()
     {
-        //float currentknob1Value = midiKnob1.ReadValue<float>();
+        //float currentknob1Value = midiKnob1.ReadValue<float>(); // skip knob 1
         float currentknob2Value = midiKnob2.ReadValue<float>();
         float currentknob3Value = midiKnob3.ReadValue<float>();
         float currentknob4Value = midiKnob4.ReadValue<float>();
@@ -104,6 +154,7 @@ public class MidiInputManager : MonoBehaviour
         float currentknob6Value = midiKnob6.ReadValue<float>();
         float currentknob7Value = midiKnob7.ReadValue<float>();
         float currentknob8Value = midiKnob8.ReadValue<float>();
+        //skip knob 9
         float currentknob10Value = midiKnob10.ReadValue<float>();
         float currentknob11Value = midiKnob11.ReadValue<float>();
         float currentknob12Value = midiKnob12.ReadValue<float>();
@@ -112,14 +163,30 @@ public class MidiInputManager : MonoBehaviour
         float currentknob15Value = midiKnob15.ReadValue<float>();
         float currentknob16Value = midiKnob16.ReadValue<float>();
 
-        float pad1Value = midiPad1.ReadValue<float>();
-        float pad2Value = midiPad2.ReadValue<float>();
-        float pad3Value = midiPad3.ReadValue<float>();
-        float pad4Value = midiPad4.ReadValue<float>();
-        float pad5Value = midiPad5.ReadValue<float>();
-        float pad6Value = midiPad6.ReadValue<float>();
-        float pad7Value = midiPad7.ReadValue<float>();
-        float pad8Value = midiPad8.ReadValue<float>();
+        float currentPad1Value = midiPad1.ReadValue<float>();
+        float currentPad2Value = midiPad2.ReadValue<float>();
+        float currentPad3Value = midiPad3.ReadValue<float>();
+        float currentPad4Value = midiPad4.ReadValue<float>();
+        float currentPad5Value = midiPad5.ReadValue<float>();
+        float currentPad6Value = midiPad6.ReadValue<float>();
+        float currentPad7Value = midiPad7.ReadValue<float>();
+        float currentPad8Value = midiPad8.ReadValue<float>();
+
+        float currentKeyC3Value = keyC3.ReadValue<float>();
+        float currentKeyD3Value = keyD3.ReadValue<float>();
+        float currentKeyE3Value = keyE3.ReadValue<float>();
+        float currentKeyF3Value = keyF3.ReadValue<float>();
+        float currentKeyG3Value = keyG3.ReadValue<float>();
+        float currentKeyA3Value = keyA3.ReadValue<float>();
+        float currentKeyB3Value = keyB3.ReadValue<float>();
+        float currentKeyC4Value = keyC4.ReadValue<float>();
+        float currentKeyD4Value = keyD4.ReadValue<float>();
+        float currentKeyE4Value = keyE4.ReadValue<float>();
+        float currentKeyF4Value = keyF4.ReadValue<float>();
+        float currentKeyG4Value = keyG4.ReadValue<float>();
+        float currentKeyA4Value = keyA4.ReadValue<float>();
+        float currentKeyB4Value = keyB4.ReadValue<float>();
+        float currentKeyC5Value = keyC5.ReadValue<float>();
 
         _midiKnob2Value = currentknob2Value;
         _midiKnob3Value = currentknob3Value;
@@ -135,14 +202,31 @@ public class MidiInputManager : MonoBehaviour
         _midiKnob14Value = currentknob14Value;
         _midiKnob15Value = currentknob15Value;
         _midiKnob16Value = currentknob16Value;
-        _midiPad1Value = pad1Value;
-        _midiPad2Value = pad2Value;
-        _midiPad3Value = pad3Value;
-        _midiPad4Value = pad4Value;
-        _midiPad5Value = pad5Value;
-        _midiPad6Value = pad6Value;
-        _midiPad7Value = pad7Value;
-        _midiPad8Value = pad8Value;
+
+        _midiPad1Value = currentPad1Value;
+        _midiPad2Value = currentPad2Value;
+        _midiPad3Value = currentPad3Value;
+        _midiPad4Value = currentPad4Value;
+        _midiPad5Value = currentPad5Value;
+        _midiPad6Value = currentPad6Value;
+        _midiPad7Value = currentPad7Value;
+        _midiPad8Value = currentPad8Value;
+
+        _keyC3_Value = currentKeyC3Value;
+        _keyD3_Value = currentKeyD3Value;
+        _keyE3_Value = currentKeyE3Value;
+        _keyF3_Value = currentKeyF3Value;
+        _keyG3_Value = currentKeyG3Value;
+        _keyA3_Value = currentKeyA3Value;
+        _keyB3_Value = currentKeyB3Value;
+        _keyC4_Value = currentKeyC4Value;
+        _keyD4_Value = currentKeyD4Value;
+        _keyE4_Value = currentKeyE4Value;
+        _keyF4_Value = currentKeyF4Value;
+        _keyG4_Value = currentKeyG4Value;
+        _keyA4_Value = currentKeyA4Value;
+        _keyB4_Value = currentKeyB4Value;
+        _keyC5_Value = currentKeyC5Value;
     }
 
 }

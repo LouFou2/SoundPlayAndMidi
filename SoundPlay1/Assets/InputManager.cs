@@ -242,6 +242,141 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": ""Tap(pressPoint=0.01)"",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyC3"",
+                    ""type"": ""Button"",
+                    ""id"": ""4eb7e233-20c1-4124-9371-dba49555a8e1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyD3"",
+                    ""type"": ""Button"",
+                    ""id"": ""edf9949d-39e0-4168-a904-f3022f504116"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyE3"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb43e9b8-b4f6-44d2-a426-9f40a066bef0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyF3"",
+                    ""type"": ""Button"",
+                    ""id"": ""42bb8c52-f300-4204-be75-676289bb6b34"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyG3"",
+                    ""type"": ""Button"",
+                    ""id"": ""0bb25495-73e2-4cd2-8708-cdd614cb580f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyA3"",
+                    ""type"": ""Button"",
+                    ""id"": ""e2047c99-3dab-411b-8e70-3d6435a2487a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyB3"",
+                    ""type"": ""Button"",
+                    ""id"": ""1df5dd15-31c3-488e-b319-e8ce2f157791"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyC4"",
+                    ""type"": ""Button"",
+                    ""id"": ""594ef1a4-12df-4259-8d30-2d57e29d6668"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyD4"",
+                    ""type"": ""Button"",
+                    ""id"": ""ce67dabe-4c8f-48c3-bdcb-5e215ef7aacb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyE4"",
+                    ""type"": ""Button"",
+                    ""id"": ""49152bd2-b467-477a-9791-7ff407693bc2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyF4"",
+                    ""type"": ""Button"",
+                    ""id"": ""99b03d49-2241-4b83-9f5f-efbbf43f7b1d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyG4"",
+                    ""type"": ""Button"",
+                    ""id"": ""6bbeda31-1834-4b61-9844-91194175c917"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyA4"",
+                    ""type"": ""Button"",
+                    ""id"": ""385829f2-ae72-4c5e-9404-b45259e0e4a3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyB4"",
+                    ""type"": ""Button"",
+                    ""id"": ""e04beeb0-ba22-4b19-9119-11f7a0ad666d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""KeyC5"",
+                    ""type"": ""Button"",
+                    ""id"": ""d1de1735-d036-49aa-8a08-84e4633d8590"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -508,6 +643,171 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
                     ""action"": ""MidiPad8"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""acc927a7-06c8-4b41-b773-96d5fd5c7c7d"",
+                    ""path"": ""<MidiDevice>/note048"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyC3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""251cd14b-aaea-4859-a436-9494d8a5a539"",
+                    ""path"": ""<MidiDevice>/note050"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyD3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69282445-f79b-4ed4-82aa-37cbd52dd3f5"",
+                    ""path"": ""<MidiDevice>/note052"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyE3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0226a0a8-6038-46da-8f2f-5b25df727e86"",
+                    ""path"": ""<MidiDevice>/note053"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyF3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5738cdf6-58ac-43ca-b110-eb29398c40df"",
+                    ""path"": ""<MidiDevice>/note055"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyG3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b757ecb6-5dc4-48c5-908e-0f4b9fb73964"",
+                    ""path"": ""<MidiDevice>/note057"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyA3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""14d323ea-fb6b-47b2-853e-8f336440f423"",
+                    ""path"": ""<MidiDevice>/note059"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyB3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e8147fef-69d1-4f27-8ca8-39723f5d936b"",
+                    ""path"": ""<MidiDevice>/note060"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyC4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3ecb09a4-edb9-4170-be41-813faab2d644"",
+                    ""path"": ""<MidiDevice>/note062"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyD4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""50c68f4b-ef9e-4046-b3e8-e26396ed68d3"",
+                    ""path"": ""<MidiDevice>/note064"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyE4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ebfc3d61-fb08-4228-9089-cf63666795d8"",
+                    ""path"": ""<MidiDevice>/note065"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyF4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""05bd6e1f-2799-4c3d-8e2b-f48be36c6538"",
+                    ""path"": ""<MidiDevice>/note067"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyG4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3187884e-c630-400f-8eb8-943b9ddbcc40"",
+                    ""path"": ""<MidiDevice>/note069"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyA4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d9d4a23b-a496-4773-bbec-91713327e9f3"",
+                    ""path"": ""<MidiDevice>/note071"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyB4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d87d183f-be22-43e9-bc56-e878cf19f887"",
+                    ""path"": ""<MidiDevice>/note072"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""MidiControl"",
+                    ""action"": ""KeyC5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -552,6 +852,21 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         m_Midi_MidiPad6 = m_Midi.FindAction("MidiPad6", throwIfNotFound: true);
         m_Midi_MidiPad7 = m_Midi.FindAction("MidiPad7", throwIfNotFound: true);
         m_Midi_MidiPad8 = m_Midi.FindAction("MidiPad8", throwIfNotFound: true);
+        m_Midi_KeyC3 = m_Midi.FindAction("KeyC3", throwIfNotFound: true);
+        m_Midi_KeyD3 = m_Midi.FindAction("KeyD3", throwIfNotFound: true);
+        m_Midi_KeyE3 = m_Midi.FindAction("KeyE3", throwIfNotFound: true);
+        m_Midi_KeyF3 = m_Midi.FindAction("KeyF3", throwIfNotFound: true);
+        m_Midi_KeyG3 = m_Midi.FindAction("KeyG3", throwIfNotFound: true);
+        m_Midi_KeyA3 = m_Midi.FindAction("KeyA3", throwIfNotFound: true);
+        m_Midi_KeyB3 = m_Midi.FindAction("KeyB3", throwIfNotFound: true);
+        m_Midi_KeyC4 = m_Midi.FindAction("KeyC4", throwIfNotFound: true);
+        m_Midi_KeyD4 = m_Midi.FindAction("KeyD4", throwIfNotFound: true);
+        m_Midi_KeyE4 = m_Midi.FindAction("KeyE4", throwIfNotFound: true);
+        m_Midi_KeyF4 = m_Midi.FindAction("KeyF4", throwIfNotFound: true);
+        m_Midi_KeyG4 = m_Midi.FindAction("KeyG4", throwIfNotFound: true);
+        m_Midi_KeyA4 = m_Midi.FindAction("KeyA4", throwIfNotFound: true);
+        m_Midi_KeyB4 = m_Midi.FindAction("KeyB4", throwIfNotFound: true);
+        m_Midi_KeyC5 = m_Midi.FindAction("KeyC5", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -637,6 +952,21 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
     private readonly InputAction m_Midi_MidiPad6;
     private readonly InputAction m_Midi_MidiPad7;
     private readonly InputAction m_Midi_MidiPad8;
+    private readonly InputAction m_Midi_KeyC3;
+    private readonly InputAction m_Midi_KeyD3;
+    private readonly InputAction m_Midi_KeyE3;
+    private readonly InputAction m_Midi_KeyF3;
+    private readonly InputAction m_Midi_KeyG3;
+    private readonly InputAction m_Midi_KeyA3;
+    private readonly InputAction m_Midi_KeyB3;
+    private readonly InputAction m_Midi_KeyC4;
+    private readonly InputAction m_Midi_KeyD4;
+    private readonly InputAction m_Midi_KeyE4;
+    private readonly InputAction m_Midi_KeyF4;
+    private readonly InputAction m_Midi_KeyG4;
+    private readonly InputAction m_Midi_KeyA4;
+    private readonly InputAction m_Midi_KeyB4;
+    private readonly InputAction m_Midi_KeyC5;
     public struct MidiActions
     {
         private @InputManager m_Wrapper;
@@ -665,6 +995,21 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         public InputAction @MidiPad6 => m_Wrapper.m_Midi_MidiPad6;
         public InputAction @MidiPad7 => m_Wrapper.m_Midi_MidiPad7;
         public InputAction @MidiPad8 => m_Wrapper.m_Midi_MidiPad8;
+        public InputAction @KeyC3 => m_Wrapper.m_Midi_KeyC3;
+        public InputAction @KeyD3 => m_Wrapper.m_Midi_KeyD3;
+        public InputAction @KeyE3 => m_Wrapper.m_Midi_KeyE3;
+        public InputAction @KeyF3 => m_Wrapper.m_Midi_KeyF3;
+        public InputAction @KeyG3 => m_Wrapper.m_Midi_KeyG3;
+        public InputAction @KeyA3 => m_Wrapper.m_Midi_KeyA3;
+        public InputAction @KeyB3 => m_Wrapper.m_Midi_KeyB3;
+        public InputAction @KeyC4 => m_Wrapper.m_Midi_KeyC4;
+        public InputAction @KeyD4 => m_Wrapper.m_Midi_KeyD4;
+        public InputAction @KeyE4 => m_Wrapper.m_Midi_KeyE4;
+        public InputAction @KeyF4 => m_Wrapper.m_Midi_KeyF4;
+        public InputAction @KeyG4 => m_Wrapper.m_Midi_KeyG4;
+        public InputAction @KeyA4 => m_Wrapper.m_Midi_KeyA4;
+        public InputAction @KeyB4 => m_Wrapper.m_Midi_KeyB4;
+        public InputAction @KeyC5 => m_Wrapper.m_Midi_KeyC5;
         public InputActionMap Get() { return m_Wrapper.m_Midi; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -746,6 +1091,51 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
             @MidiPad8.started += instance.OnMidiPad8;
             @MidiPad8.performed += instance.OnMidiPad8;
             @MidiPad8.canceled += instance.OnMidiPad8;
+            @KeyC3.started += instance.OnKeyC3;
+            @KeyC3.performed += instance.OnKeyC3;
+            @KeyC3.canceled += instance.OnKeyC3;
+            @KeyD3.started += instance.OnKeyD3;
+            @KeyD3.performed += instance.OnKeyD3;
+            @KeyD3.canceled += instance.OnKeyD3;
+            @KeyE3.started += instance.OnKeyE3;
+            @KeyE3.performed += instance.OnKeyE3;
+            @KeyE3.canceled += instance.OnKeyE3;
+            @KeyF3.started += instance.OnKeyF3;
+            @KeyF3.performed += instance.OnKeyF3;
+            @KeyF3.canceled += instance.OnKeyF3;
+            @KeyG3.started += instance.OnKeyG3;
+            @KeyG3.performed += instance.OnKeyG3;
+            @KeyG3.canceled += instance.OnKeyG3;
+            @KeyA3.started += instance.OnKeyA3;
+            @KeyA3.performed += instance.OnKeyA3;
+            @KeyA3.canceled += instance.OnKeyA3;
+            @KeyB3.started += instance.OnKeyB3;
+            @KeyB3.performed += instance.OnKeyB3;
+            @KeyB3.canceled += instance.OnKeyB3;
+            @KeyC4.started += instance.OnKeyC4;
+            @KeyC4.performed += instance.OnKeyC4;
+            @KeyC4.canceled += instance.OnKeyC4;
+            @KeyD4.started += instance.OnKeyD4;
+            @KeyD4.performed += instance.OnKeyD4;
+            @KeyD4.canceled += instance.OnKeyD4;
+            @KeyE4.started += instance.OnKeyE4;
+            @KeyE4.performed += instance.OnKeyE4;
+            @KeyE4.canceled += instance.OnKeyE4;
+            @KeyF4.started += instance.OnKeyF4;
+            @KeyF4.performed += instance.OnKeyF4;
+            @KeyF4.canceled += instance.OnKeyF4;
+            @KeyG4.started += instance.OnKeyG4;
+            @KeyG4.performed += instance.OnKeyG4;
+            @KeyG4.canceled += instance.OnKeyG4;
+            @KeyA4.started += instance.OnKeyA4;
+            @KeyA4.performed += instance.OnKeyA4;
+            @KeyA4.canceled += instance.OnKeyA4;
+            @KeyB4.started += instance.OnKeyB4;
+            @KeyB4.performed += instance.OnKeyB4;
+            @KeyB4.canceled += instance.OnKeyB4;
+            @KeyC5.started += instance.OnKeyC5;
+            @KeyC5.performed += instance.OnKeyC5;
+            @KeyC5.canceled += instance.OnKeyC5;
         }
 
         private void UnregisterCallbacks(IMidiActions instance)
@@ -822,6 +1212,51 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
             @MidiPad8.started -= instance.OnMidiPad8;
             @MidiPad8.performed -= instance.OnMidiPad8;
             @MidiPad8.canceled -= instance.OnMidiPad8;
+            @KeyC3.started -= instance.OnKeyC3;
+            @KeyC3.performed -= instance.OnKeyC3;
+            @KeyC3.canceled -= instance.OnKeyC3;
+            @KeyD3.started -= instance.OnKeyD3;
+            @KeyD3.performed -= instance.OnKeyD3;
+            @KeyD3.canceled -= instance.OnKeyD3;
+            @KeyE3.started -= instance.OnKeyE3;
+            @KeyE3.performed -= instance.OnKeyE3;
+            @KeyE3.canceled -= instance.OnKeyE3;
+            @KeyF3.started -= instance.OnKeyF3;
+            @KeyF3.performed -= instance.OnKeyF3;
+            @KeyF3.canceled -= instance.OnKeyF3;
+            @KeyG3.started -= instance.OnKeyG3;
+            @KeyG3.performed -= instance.OnKeyG3;
+            @KeyG3.canceled -= instance.OnKeyG3;
+            @KeyA3.started -= instance.OnKeyA3;
+            @KeyA3.performed -= instance.OnKeyA3;
+            @KeyA3.canceled -= instance.OnKeyA3;
+            @KeyB3.started -= instance.OnKeyB3;
+            @KeyB3.performed -= instance.OnKeyB3;
+            @KeyB3.canceled -= instance.OnKeyB3;
+            @KeyC4.started -= instance.OnKeyC4;
+            @KeyC4.performed -= instance.OnKeyC4;
+            @KeyC4.canceled -= instance.OnKeyC4;
+            @KeyD4.started -= instance.OnKeyD4;
+            @KeyD4.performed -= instance.OnKeyD4;
+            @KeyD4.canceled -= instance.OnKeyD4;
+            @KeyE4.started -= instance.OnKeyE4;
+            @KeyE4.performed -= instance.OnKeyE4;
+            @KeyE4.canceled -= instance.OnKeyE4;
+            @KeyF4.started -= instance.OnKeyF4;
+            @KeyF4.performed -= instance.OnKeyF4;
+            @KeyF4.canceled -= instance.OnKeyF4;
+            @KeyG4.started -= instance.OnKeyG4;
+            @KeyG4.performed -= instance.OnKeyG4;
+            @KeyG4.canceled -= instance.OnKeyG4;
+            @KeyA4.started -= instance.OnKeyA4;
+            @KeyA4.performed -= instance.OnKeyA4;
+            @KeyA4.canceled -= instance.OnKeyA4;
+            @KeyB4.started -= instance.OnKeyB4;
+            @KeyB4.performed -= instance.OnKeyB4;
+            @KeyB4.canceled -= instance.OnKeyB4;
+            @KeyC5.started -= instance.OnKeyC5;
+            @KeyC5.performed -= instance.OnKeyC5;
+            @KeyC5.canceled -= instance.OnKeyC5;
         }
 
         public void RemoveCallbacks(IMidiActions instance)
@@ -874,5 +1309,20 @@ public partial class @InputManager: IInputActionCollection2, IDisposable
         void OnMidiPad6(InputAction.CallbackContext context);
         void OnMidiPad7(InputAction.CallbackContext context);
         void OnMidiPad8(InputAction.CallbackContext context);
+        void OnKeyC3(InputAction.CallbackContext context);
+        void OnKeyD3(InputAction.CallbackContext context);
+        void OnKeyE3(InputAction.CallbackContext context);
+        void OnKeyF3(InputAction.CallbackContext context);
+        void OnKeyG3(InputAction.CallbackContext context);
+        void OnKeyA3(InputAction.CallbackContext context);
+        void OnKeyB3(InputAction.CallbackContext context);
+        void OnKeyC4(InputAction.CallbackContext context);
+        void OnKeyD4(InputAction.CallbackContext context);
+        void OnKeyE4(InputAction.CallbackContext context);
+        void OnKeyF4(InputAction.CallbackContext context);
+        void OnKeyG4(InputAction.CallbackContext context);
+        void OnKeyA4(InputAction.CallbackContext context);
+        void OnKeyB4(InputAction.CallbackContext context);
+        void OnKeyC5(InputAction.CallbackContext context);
     }
 }
