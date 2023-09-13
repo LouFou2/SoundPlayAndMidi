@@ -51,6 +51,7 @@ public class MidiInputManager : MonoBehaviour
     private InputAction keyB4;
     private InputAction keyC5;
 
+
     //== Values of the inputs==//
     public float _midiKnob2Value = 0.5f;
     public float _midiKnob3Value = 0.5f;
@@ -90,6 +91,9 @@ public class MidiInputManager : MonoBehaviour
     public float _keyA4_Value = 0f;
     public float _keyB4_Value = 0f;
     public float _keyC5_Value = 0f;
+
+    public int previousKeyIndex = -1;
+    public int currentKeyIndex = -1;
 
     void Awake()
     {
@@ -133,6 +137,8 @@ public class MidiInputManager : MonoBehaviour
         keyB4 = actions.FindActionMap("Midi").FindAction("KeyB4");
         keyC5 = actions.FindActionMap("Midi").FindAction("KeyC5");
 
+        previousKeyIndex = -1;
+        currentKeyIndex = -1;
     }
     void OnEnable()
     {
@@ -143,7 +149,6 @@ public class MidiInputManager : MonoBehaviour
         actions.FindActionMap("Midi").Disable();
     }
     
-
     void Update()
     {
         //float currentknob1Value = midiKnob1.ReadValue<float>(); // skip knob 1
@@ -188,6 +193,23 @@ public class MidiInputManager : MonoBehaviour
         float currentKeyB4Value = keyB4.ReadValue<float>();
         float currentKeyC5Value = keyC5.ReadValue<float>();
 
+        //== Assign an index value for currently pressed key ==//
+        if (currentKeyC3Value > 0.05) { currentKeyIndex = 0; }
+        else if (currentKeyD3Value > 0.05) { currentKeyIndex = 1; }
+        else if (currentKeyE3Value > 0.05) { currentKeyIndex = 2; }
+        else if (currentKeyF3Value > 0.05) { currentKeyIndex = 3; }
+        else if (currentKeyG3Value > 0.05) { currentKeyIndex = 4; }
+        else if (currentKeyA3Value > 0.05) { currentKeyIndex = 5; }
+        else if (currentKeyB3Value > 0.05) { currentKeyIndex = 6; }
+        else if (currentKeyC4Value > 0.05) { currentKeyIndex = 7; }
+        else if (currentKeyD4Value > 0.05) { currentKeyIndex = 8; }
+        else if (currentKeyE4Value > 0.05) { currentKeyIndex = 9; }
+        else if (currentKeyF4Value > 0.05) { currentKeyIndex = 10; }
+        else if (currentKeyG4Value > 0.05) { currentKeyIndex = 11; }
+        else if (currentKeyA4Value > 0.05) { currentKeyIndex = 12; }
+        else if (currentKeyB4Value > 0.05) { currentKeyIndex = 13; }
+        else if (currentKeyC5Value > 0.05) { currentKeyIndex = 14; }
+
         _midiKnob2Value = currentknob2Value;
         _midiKnob3Value = currentknob3Value;
         _midiKnob4Value = currentknob4Value;
@@ -227,6 +249,9 @@ public class MidiInputManager : MonoBehaviour
         _keyA4_Value = currentKeyA4Value;
         _keyB4_Value = currentKeyB4Value;
         _keyC5_Value = currentKeyC5Value;
+
+        //== Update Key Index ==//
+        previousKeyIndex = currentKeyIndex;
     }
 
 }
