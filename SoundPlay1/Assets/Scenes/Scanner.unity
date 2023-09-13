@@ -1538,6 +1538,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   midiInputManager: {fileID: 1587424115}
+  textMeshPro: {fileID: 670501750}
 --- !u!114 &1779533306
 MonoBehaviour:
   m_ObjectHideFlags: 0
