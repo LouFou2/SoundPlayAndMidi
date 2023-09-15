@@ -12,8 +12,8 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private GameObject followTarget;
     [SerializeField] private GameObject[] cameraAim;
 
-    private Vector3 lookTargetPosition = Vector3.zero;
-    private Vector3 followTargetPosition = Vector3.zero;
+    private Vector3 newLookTarget = Vector3.zero;
+    private Vector3 newFollowTarget = Vector3.zero;
 
     private int _previousKeyIndex = -1;
     private int _currentKeyIndex = -1;
@@ -39,49 +39,49 @@ public class CameraManager : MonoBehaviour
                 switch (i)
                 {
                     case 0:
-                        lookTargetPosition = cameraAim[0].transform.position;
+                        newLookTarget = cameraAim[0].transform.position;
                         break;
                     case 1:
-                        lookTargetPosition = cameraAim[1].transform.position;
+                        newLookTarget = cameraAim[1].transform.position;
                         break;
                     case 2:
-                        lookTargetPosition = cameraAim[2].transform.position;
+                        newLookTarget = cameraAim[2].transform.position;
                         break;
                     case 3:
-                        lookTargetPosition = cameraAim[3].transform.position;
+                        newLookTarget = cameraAim[3].transform.position;
                         break;
                     case 4:
-                        lookTargetPosition = cameraAim[4].transform.position;
+                        newLookTarget = cameraAim[4].transform.position;
                         break;
                     case 5:
-                        lookTargetPosition = cameraAim[5].transform.position;
+                        newLookTarget = cameraAim[5].transform.position;
                         break;
                     case 6:
-                        lookTargetPosition = cameraAim[6].transform.position;
+                        newLookTarget = cameraAim[6].transform.position;
                         break;
                     case 7:
-                        lookTargetPosition = cameraAim[7].transform.position;
+                        newLookTarget = cameraAim[7].transform.position;
                         break;
                     case 8:
-                        lookTargetPosition = cameraAim[8].transform.position;
+                        newLookTarget = cameraAim[8].transform.position;
                         break;
                     case 9:
-                        lookTargetPosition = cameraAim[9].transform.position;
+                        newLookTarget = cameraAim[9].transform.position;
                         break;
                     case 10:
-                        lookTargetPosition = cameraAim[10].transform.position;
+                        newLookTarget = cameraAim[10].transform.position;
                         break;
                     case 11:
-                        lookTargetPosition = cameraAim[11].transform.position;
+                        newLookTarget = cameraAim[11].transform.position;
                         break;
                     case 12:
-                        lookTargetPosition = cameraAim[12].transform.position;
+                        newLookTarget = cameraAim[12].transform.position;
                         break;
                     case 13:
-                        lookTargetPosition = cameraAim[13].transform.position;
+                        newLookTarget = cameraAim[13].transform.position;
                         break;
                     case 14:
-                        lookTargetPosition = cameraAim[14].transform.position;
+                        newLookTarget = cameraAim[14].transform.position;
                         break;
                 }
             }
@@ -96,21 +96,25 @@ public class CameraManager : MonoBehaviour
 
     private IEnumerator SwitchCameraTarget() 
     {
-        if (lookAtTarget == null || followTarget == null) 
+        if (lookAtTarget == null) 
         { yield break; }
-        else 
+
+        float duration = 0.5f; // Adjust the duration as needed
+        float elapsedTime = 0f;
+        Vector3 initialLookAtPosition = lookAtTarget.transform.position;
+
+        while (elapsedTime < duration)
         {
-            //move the lookat target to the current index lookat position, using an eased lerp
-            while (lookAtTarget.transform.position != lookTargetPosition) 
-            {
-                float currentLookAtX = lookAtTarget.transform.position.x;
-                float aimLookatX = lookTargetPosition.x;
-                float lerpingLookatX = Mathf.Lerp(currentLookAtX, aimLookatX, Time.deltaTime * 10f);
-                lookAtTarget.transform.position = new Vector3(lerpingLookatX, lookAtTarget.transform.position.y, lookAtTarget.transform.position.z);
-            }
-            
-            //move camera position to current index camera position, using eased lerp
+            // Interpolate the lookAtTarget position smoothly
+            float t = elapsedTime / duration;
+            lookAtTarget.transform.position = Vector3.Lerp(initialLookAtPosition, newLookTarget, t);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
+
+        // Ensure the final position is exactly the target position
+        lookAtTarget.transform.position = newLookTarget;
     }
 
 }
