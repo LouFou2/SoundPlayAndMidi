@@ -16,7 +16,10 @@ public class ScanLightMover : MonoBehaviour
 
     private int _previousKeyIndex = -1;
     private int _currentKeyIndex = -1;
-    // Start is called before the first frame update
+    private bool newKeyTriggered = false;
+
+    private float time = 0f;
+
     void Start()
     {
         _previousKeyIndex = -1;
@@ -88,38 +91,41 @@ public class ScanLightMover : MonoBehaviour
         }
         if (_currentKeyIndex != -1 && _currentKeyIndex != _previousKeyIndex)
         {
-            StartCoroutine(SwitchCameraTarget());
+            newKeyTriggered = true;
             AudioPlay();
+        }
+
+        if (newKeyTriggered) 
+        {
+            SwitchScanLightTarget();
         }
         _previousKeyIndex = _currentKeyIndex;
     }
 
-    private IEnumerator SwitchCameraTarget()
+    void SwitchScanLightTarget()
     {
-        if (scanLight == null)
-        { yield break; }
-
-        float duration = 0.5f; // Adjust the duration as needed
-        float elapsedTime = 0f;
         Vector3 initialTargetPosition = scanLight.transform.position;
+        Vector3 distanceToTarget = newAimTarget - initialTargetPosition;
 
-        while (elapsedTime < duration)
-        {
-            // Interpolate the lookAtTarget position smoothly
-            float t = elapsedTime / duration;
-            scanLight.transform.position = Vector3.Lerp(initialTargetPosition, newAimTarget, t);
-
-            elapsedTime += Time.deltaTime;
-            
-            yield return null;
+        if (scanLight == null) 
+        { 
+            return; 
         }
-
-        // Ensure the final position is exactly the target position
-        scanLight.transform.position = newAimTarget;
+        else if ( scanLight.transform.position != newAimTarget )
+        { 
+            scanLight.transform.position = Vector3.Lerp(initialTargetPosition, newAimTarget, time);
+        }
+        else if (distanceToTarget.magnitude <= 0.02f) 
+        {
+            scanLight.transform.position = newAimTarget;
+            newKeyTriggered = false;
+            time = 0f;
+        }
+        time += Time.deltaTime;
     }
+    
     void AudioPlay()
     {
         if (audioSource != null) { audioSource.Play(); }
     }
-
 }

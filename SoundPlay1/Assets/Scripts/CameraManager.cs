@@ -9,24 +9,24 @@ public class CameraManager : MonoBehaviour
 
     // the camera will switch between lookat targets, depending on the current key index
     [SerializeField] private GameObject lookAtTarget;
-    [SerializeField] private GameObject followTarget;
+    //[SerializeField] private GameObject followTarget; // not using this for this project, but might in other projects
     [SerializeField] private GameObject[] cameraAim;
 
     private Vector3 newLookTarget = Vector3.zero;
-    private Vector3 newFollowTarget = Vector3.zero;
+    //private Vector3 newFollowTarget = Vector3.zero;
 
     private int _previousKeyIndex = -1;
     private int _currentKeyIndex = -1;
-    // Start is called before the first frame update
+    private bool newKeyTriggered = false;
+    
+    private float time = 0f;
+
     void Start()
     {
         _previousKeyIndex = -1;
         _currentKeyIndex = -1;
-
-        //== Get all the children "CameraAim" gameobjects and populate the indexes of cameraAim ==//
     }
 
-    // Update is called once per frame
     void Update()
     {
         _currentKeyIndex = midiInput.currentKeyIndex;
@@ -89,32 +89,35 @@ public class CameraManager : MonoBehaviour
         }
         if (_currentKeyIndex != -1 && _currentKeyIndex != _previousKeyIndex) 
         {
-            StartCoroutine(SwitchCameraTarget());
+            newKeyTriggered = true;
+        }
+
+        if (newKeyTriggered) 
+        {
+            SwitchCameraTarget();
         }
         _previousKeyIndex = _currentKeyIndex;
     }
-
-    private IEnumerator SwitchCameraTarget() 
+    void SwitchCameraTarget()
     {
-        if (lookAtTarget == null) 
-        { yield break; }
+        Vector3 initialTargetPosition = lookAtTarget.transform.position;
+        Vector3 distanceToTarget = newLookTarget - initialTargetPosition;
 
-        float duration = 0.5f; // Adjust the duration as needed
-        float elapsedTime = 0f;
-        Vector3 initialLookAtPosition = lookAtTarget.transform.position;
-
-        while (elapsedTime < duration)
+        if (lookAtTarget == null)
         {
-            // Interpolate the lookAtTarget position smoothly
-            float t = elapsedTime / duration;
-            lookAtTarget.transform.position = Vector3.Lerp(initialLookAtPosition, newLookTarget, t);
-
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            return;
         }
-
-        // Ensure the final position is exactly the target position
-        lookAtTarget.transform.position = newLookTarget;
+        else if (lookAtTarget.transform.position != newLookTarget)
+        {
+            lookAtTarget.transform.position = Vector3.Lerp(initialTargetPosition, newLookTarget, time);
+        }
+        else if (distanceToTarget.magnitude <= 0.02f)
+        {
+            lookAtTarget.transform.position = newLookTarget;
+            newKeyTriggered = false;
+            time = 0f;
+        }
+        time += Time.deltaTime;
     }
 
 }
