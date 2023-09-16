@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 86070273}
   m_Layer: 0
-  m_Name: CameraAim6
+  m_Name: ScanZone6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 181953315}
   m_Layer: 0
-  m_Name: CameraAim13
+  m_Name: ScanZone13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292006124}
   m_Layer: 0
-  m_Name: CameraAim9
+  m_Name: ScanZone9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,7 +279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   midiInput: {fileID: 1587424115}
   lookAtTarget: {fileID: 881078740}
-  followTarget: {fileID: 926691250}
   cameraAim:
   - {fileID: 881351041}
   - {fileID: 1908777834}
@@ -403,7 +402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 635669427}
   m_Layer: 0
-  m_Name: CameraAim7
+  m_Name: ScanZone7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -569,7 +568,7 @@ GameObject:
   m_Component:
   - component: {fileID: 690853056}
   m_Layer: 0
-  m_Name: CameraAim5
+  m_Name: ScanZone5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,7 +599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 697885416}
   m_Layer: 0
-  m_Name: CameraAim8
+  m_Name: ScanZone8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -667,7 +666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 881351042}
   m_Layer: 0
-  m_Name: CameraAim1
+  m_Name: ScanZone1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +795,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.17275733, y: 0.11885281, z: -0.021004416, w: 0.9775417}
+  m_LocalRotation: {x: 0.17275734, y: 0.118852794, z: -0.021004422, w: 0.9775417}
   m_LocalPosition: {x: 0, y: 1.18, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -900,7 +899,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030456112}
-  m_LocalRotation: {x: 0.17275733, y: 0.11885281, z: -0.021004416, w: 0.9775417}
+  m_LocalRotation: {x: 0.17275734, y: 0.118852794, z: -0.021004422, w: 0.9775417}
   m_LocalPosition: {x: 0, y: 1.18, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1079,7 +1078,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1196217512}
   m_Layer: 0
-  m_Name: CameraAim4
+  m_Name: ScanZone4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1110,7 +1109,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1483669944}
   m_Layer: 0
-  m_Name: CameraAim10
+  m_Name: ScanZone10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1141,7 +1140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1506523959}
   m_Layer: 0
-  m_Name: CameraAim15
+  m_Name: ScanZone15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1564,7 +1563,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1800081273}
   m_Layer: 0
-  m_Name: CameraAim14
+  m_Name: ScanZone14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1595,7 +1594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810690942}
   m_Layer: 0
-  m_Name: CameraAim11
+  m_Name: ScanZone11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1626,7 +1625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870329776}
   m_Layer: 0
-  m_Name: CameraAim12
+  m_Name: ScanZone12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1657,7 +1656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1908777835}
   m_Layer: 0
-  m_Name: CameraAim2
+  m_Name: ScanZone2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1896,7 +1895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2127264232}
   m_Layer: 0
-  m_Name: CameraAim3
+  m_Name: ScanZone3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
