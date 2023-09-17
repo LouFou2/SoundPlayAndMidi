@@ -10,6 +10,7 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private ZoneValues zoneValues;
+    [SerializeField] private int thisObjectIndex = -1;
     
     [Header("Rhythmic means looping is not used")]
     [SerializeField] private bool rhythmic = false;
@@ -143,9 +144,9 @@ public class SoundAnimTweaker : MonoBehaviour
                     zoneValues.waveAmplitude[i] = waveAmplitude[i];
                 }
 
-                zoneValues.waveValue[i] = GenerateSineWave(zoneValues.waveAmplitude[i], zoneValues.waveFrequency[i]); // *** The issue here is: other objects with the same script will send 0 values
+                zoneValues.waveValue[i] = GenerateSineWave(zoneValues.waveAmplitude[i], zoneValues.waveFrequency[i]); 
                 
-                Debug.Log("waveValue" + i + ": " + waveValue[i]); // *** So even if I do nice calculations here and use knobs, it will just be 0
+                Debug.Log("waveValue" + i + ": " + waveValue[i]); 
             }
             
             if (rhythmic) 
@@ -240,80 +241,80 @@ public class SoundAnimTweaker : MonoBehaviour
     {
         if (_currentKeyIndex == -1) { return; }
         Debug.Log("Passing Anim Values...");
-        if (_currentKeyIndex == 0) 
+        if (_currentKeyIndex == 0 && thisObjectIndex == 0) 
         {
             Debug.Log("Passing Value" + zoneValues.waveValue[0]);
             animator.SetFloat("1WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("1WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("1WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 1) {
+        if (_currentKeyIndex == 1 && thisObjectIndex == 1) {
             animator.SetFloat("2WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("2WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("2WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 2) {
+        if (_currentKeyIndex == 2 && thisObjectIndex == 2) {
             animator.SetFloat("3WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("3WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("3WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 3) {
+        if (_currentKeyIndex == 3 && thisObjectIndex == 3) {
             animator.SetFloat("4WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("4WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("4WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 4) {
+        if (_currentKeyIndex == 4 && thisObjectIndex == 4) {
             animator.SetFloat("5WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("5WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("5WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 5) {
+        if (_currentKeyIndex == 5 && thisObjectIndex == 5) {
             animator.SetFloat("6WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("6WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("6WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 6)
+        if (_currentKeyIndex == 6 && thisObjectIndex == 6)
         {
             animator.SetFloat("7WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("7WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("7WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 7) {
+        if (_currentKeyIndex == 7 && thisObjectIndex == 7) {
             animator.SetFloat("8WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("8WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("8WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 8) {
+        if (_currentKeyIndex == 8 && thisObjectIndex == 8) {
             animator.SetFloat("9WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("9WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("9WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 9) {
+        if (_currentKeyIndex == 9 && thisObjectIndex == 9) {
             animator.SetFloat("10WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("10WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("10WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 10) {
+        if (_currentKeyIndex == 10 && thisObjectIndex == 10) {
             animator.SetFloat("11WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("11WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("11WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 11) {
+        if (_currentKeyIndex == 11 && thisObjectIndex == 11) {
             animator.SetFloat("12WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("12WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("12WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 12) {
+        if (_currentKeyIndex == 12 && thisObjectIndex == 12) {
             animator.SetFloat("13WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("13WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("13WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 13) {
+        if (_currentKeyIndex == 13 && thisObjectIndex == 13) {
             animator.SetFloat("14WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("14WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("14WaveValue2", zoneValues.waveValue[2]);
         }
-        if (_currentKeyIndex == 14) {
+        if (_currentKeyIndex == 14 && thisObjectIndex == 14) {
             animator.SetFloat("15WaveValue0", zoneValues.waveValue[0]);
             animator.SetFloat("15WaveValue1", zoneValues.waveValue[1]);
             animator.SetFloat("15WaveValue2", zoneValues.waveValue[2]);
