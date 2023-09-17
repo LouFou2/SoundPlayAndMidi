@@ -13,8 +13,10 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private bool rhythmic = false;
     private bool triggerBufferOn = false;
 
-    [SerializeField] private float volumeMin = 0.3f; // Set these values in inspector for what works best
+    [SerializeField] private float defaultVolume = 1f; // Set these values in inspector for what works best
+    [SerializeField] private float volumeMin = 0.3f; 
     [SerializeField] private float volumeMax = 1f;
+    [SerializeField] private float defaultPitch = 1f;
     [SerializeField] private float pitchMin = 0.5f;
     [SerializeField] private float pitchMax = 1.5f;
 
@@ -44,7 +46,7 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private bool zoneActive = false;
 
     // private int knobIndex = -1; // might need this later
-    private int _currentKeyIndex;
+    private int _currentKeyIndex =-1;
 
     void Start()
     {
@@ -90,6 +92,8 @@ public class SoundAnimTweaker : MonoBehaviour
         GetKeyIndex();
 
         if (zoneTrigger != null && zoneTrigger.isTriggered) { zoneActive = true; }
+        else if (zoneTrigger != null && !zoneTrigger.isTriggered) { zoneActive = false; }
+
         if (midiInputManager != null) 
         {
             
@@ -112,14 +116,6 @@ public class SoundAnimTweaker : MonoBehaviour
             }
             ModulateSound();
             PassAnimValues();
-        }
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("ActiveScanPoint"))
-        {
-            // An object on the "ActiveScanPoint" layer has entered the trigger.
-            // You can add your logic here.
         }
     }
     private int GetKeyIndex() 
@@ -146,7 +142,7 @@ public class SoundAnimTweaker : MonoBehaviour
             case 6:
                 return midiInputManager._midiKnob8Value * knobMultiplier8;
             default:
-                return 0.5f; // Default value for unknown index
+                return 1f; // Default value for unknown index
         }
     }
 
@@ -170,7 +166,7 @@ public class SoundAnimTweaker : MonoBehaviour
             case 6:
                 return midiInputManager._midiKnob16Value * knobMultiplier16;
             default:
-                return 0.5f; // Default value for unknown index
+                return 1f; // Default value for unknown index
         }
     }
     float GenerateSineWave(float amplitude, float frequency)
@@ -181,7 +177,7 @@ public class SoundAnimTweaker : MonoBehaviour
     void DoRhythmicSound() 
     {
         
-        float triggerThreshold = waveAmplitude[0] * 0.98f;
+        float triggerThreshold = waveAmplitude[0] * 0.98f; // Multiply Amplitude with appropriate factor to get a buffer threshold
         if(midiInputManager._midiKnob2Value == 0) { triggerBufferOn = true; } // just a hacky way I stopped it from playing once at the start
         // Check if waveValue[0] crosses the trigger threshold
         if ((waveValue[0] <= -triggerThreshold || waveValue[0] >= triggerThreshold) && !triggerBufferOn) 
@@ -197,13 +193,22 @@ public class SoundAnimTweaker : MonoBehaviour
     }
     void ModulateSound() 
     {
-        if (waveFrequency[1] != initialWaveFrequency[1] && waveAmplitude[1] != initialWaveAmplitude[1])
+        if (waveFrequency[1] == initialWaveFrequency[1]) 
+        { 
+            audioSource.volume = defaultVolume; 
+        }
+        else if (waveFrequency[1] != initialWaveFrequency[1])
         {
             float volumeRange = volumeMax - volumeMin;
             float moddedVolumeRange = volumeRange * Mathf.Abs(waveValue[1]); // had to keep it between 0 and 1
-            audioSource.volume = moddedVolumeRange; 
+            audioSource.volume = moddedVolumeRange;
         }
-        if (waveFrequency[2] != initialWaveFrequency[2] && waveAmplitude[2] != initialWaveAmplitude[2])
+
+        if (waveAmplitude[1] == initialWaveAmplitude[1]) 
+        {
+            audioSource.pitch = defaultPitch;
+        }
+        else if (waveAmplitude[2] != initialWaveAmplitude[2])
         {
             float pitchRange = pitchMax - pitchMin;
             float moddedPitchRange = pitchRange * Mathf.Abs(waveValue[2]); // same
@@ -218,13 +223,143 @@ public class SoundAnimTweaker : MonoBehaviour
 
     void PassAnimValues() 
     {
-        animator.SetFloat("WaveValue0", waveValue[0]);
-        animator.SetFloat("WaveValue1", waveValue[1]);
-        animator.SetFloat("WaveValue2", waveValue[2]);
-        animator.SetFloat("WaveValue3", waveValue[3]);
-        animator.SetFloat("WaveValue4", waveValue[4]);
-        animator.SetFloat("WaveValue5", waveValue[5]);
-        animator.SetFloat("WaveValue6", waveValue[6]);
+        if (_currentKeyIndex == -1) { return; }
+        if (_currentKeyIndex == 0) 
+        {
+            animator.SetFloat("1WaveValue0", waveValue[0]);
+            animator.SetFloat("1WaveValue1", waveValue[1]);
+            animator.SetFloat("1WaveValue2", waveValue[2]);
+            animator.SetFloat("1WaveValue3", waveValue[3]);
+            animator.SetFloat("1WaveValue4", waveValue[4]);
+            animator.SetFloat("1WaveValue5", waveValue[5]);
+            animator.SetFloat("1WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 1) {
+            animator.SetFloat("2WaveValue0", waveValue[0]);
+            animator.SetFloat("2WaveValue1", waveValue[1]);
+            animator.SetFloat("2WaveValue2", waveValue[2]);
+            animator.SetFloat("2WaveValue3", waveValue[3]);
+            animator.SetFloat("2WaveValue4", waveValue[4]);
+            animator.SetFloat("2WaveValue5", waveValue[5]);
+            animator.SetFloat("2WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 2) {
+            animator.SetFloat("3WaveValue0", waveValue[0]);
+            animator.SetFloat("3WaveValue1", waveValue[1]);
+            animator.SetFloat("3WaveValue2", waveValue[2]);
+            animator.SetFloat("3WaveValue3", waveValue[3]);
+            animator.SetFloat("3WaveValue4", waveValue[4]);
+            animator.SetFloat("3WaveValue5", waveValue[5]);
+            animator.SetFloat("3WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 3) {
+            animator.SetFloat("4WaveValue0", waveValue[0]);
+            animator.SetFloat("4WaveValue1", waveValue[1]);
+            animator.SetFloat("4WaveValue2", waveValue[2]);
+            animator.SetFloat("4WaveValue3", waveValue[3]);
+            animator.SetFloat("4WaveValue4", waveValue[4]);
+            animator.SetFloat("4WaveValue5", waveValue[5]);
+            animator.SetFloat("4WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 4) {
+            animator.SetFloat("5WaveValue0", waveValue[0]);
+            animator.SetFloat("5WaveValue1", waveValue[1]);
+            animator.SetFloat("5WaveValue2", waveValue[2]);
+            animator.SetFloat("5WaveValue3", waveValue[3]);
+            animator.SetFloat("5WaveValue4", waveValue[4]);
+            animator.SetFloat("5WaveValue5", waveValue[5]);
+            animator.SetFloat("5WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 5) {
+            animator.SetFloat("6WaveValue0", waveValue[0]);
+            animator.SetFloat("6WaveValue1", waveValue[1]);
+            animator.SetFloat("6WaveValue2", waveValue[2]);
+            animator.SetFloat("6WaveValue3", waveValue[3]);
+            animator.SetFloat("6WaveValue4", waveValue[4]);
+            animator.SetFloat("6WaveValue5", waveValue[5]);
+            animator.SetFloat("6WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 6)
+        {
+            animator.SetFloat("7WaveValue0", waveValue[0]);
+            animator.SetFloat("7WaveValue1", waveValue[1]);
+            animator.SetFloat("7WaveValue2", waveValue[2]);
+            animator.SetFloat("7WaveValue3", waveValue[3]);
+            animator.SetFloat("7WaveValue4", waveValue[4]);
+            animator.SetFloat("7WaveValue5", waveValue[5]);
+            animator.SetFloat("7WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 7) {
+            animator.SetFloat("8WaveValue0", waveValue[0]);
+            animator.SetFloat("8WaveValue1", waveValue[1]);
+            animator.SetFloat("8WaveValue2", waveValue[2]);
+            animator.SetFloat("8WaveValue3", waveValue[3]);
+            animator.SetFloat("8WaveValue4", waveValue[4]);
+            animator.SetFloat("8WaveValue5", waveValue[5]);
+            animator.SetFloat("8WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 8) {
+            animator.SetFloat("9WaveValue0", waveValue[0]);
+            animator.SetFloat("9WaveValue1", waveValue[1]);
+            animator.SetFloat("9WaveValue2", waveValue[2]);
+            animator.SetFloat("9WaveValue3", waveValue[3]);
+            animator.SetFloat("9WaveValue4", waveValue[4]);
+            animator.SetFloat("9WaveValue5", waveValue[5]);
+            animator.SetFloat("9WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 9) {
+            animator.SetFloat("10WaveValue0", waveValue[0]);
+            animator.SetFloat("10WaveValue1", waveValue[1]);
+            animator.SetFloat("10WaveValue2", waveValue[2]);
+            animator.SetFloat("10WaveValue3", waveValue[3]);
+            animator.SetFloat("10WaveValue4", waveValue[4]);
+            animator.SetFloat("10WaveValue5", waveValue[5]);
+            animator.SetFloat("10WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 10) {
+            animator.SetFloat("11WaveValue0", waveValue[0]);
+            animator.SetFloat("11WaveValue1", waveValue[1]);
+            animator.SetFloat("11WaveValue2", waveValue[2]);
+            animator.SetFloat("11WaveValue3", waveValue[3]);
+            animator.SetFloat("11WaveValue4", waveValue[4]);
+            animator.SetFloat("11WaveValue5", waveValue[5]);
+            animator.SetFloat("11WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 11) {
+            animator.SetFloat("12WaveValue0", waveValue[0]);
+            animator.SetFloat("12WaveValue1", waveValue[1]);
+            animator.SetFloat("12WaveValue2", waveValue[2]);
+            animator.SetFloat("12WaveValue3", waveValue[3]);
+            animator.SetFloat("12WaveValue4", waveValue[4]);
+            animator.SetFloat("12WaveValue5", waveValue[5]);
+            animator.SetFloat("12WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 12) {
+            animator.SetFloat("13WaveValue0", waveValue[0]);
+            animator.SetFloat("13WaveValue1", waveValue[1]);
+            animator.SetFloat("13WaveValue2", waveValue[2]);
+            animator.SetFloat("13WaveValue3", waveValue[3]);
+            animator.SetFloat("13WaveValue4", waveValue[4]);
+            animator.SetFloat("13WaveValue5", waveValue[5]);
+            animator.SetFloat("13WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 13) {
+            animator.SetFloat("14WaveValue0", waveValue[0]);
+            animator.SetFloat("14WaveValue1", waveValue[1]);
+            animator.SetFloat("14WaveValue2", waveValue[2]);
+            animator.SetFloat("14WaveValue3", waveValue[3]);
+            animator.SetFloat("14WaveValue4", waveValue[4]);
+            animator.SetFloat("14WaveValue5", waveValue[5]);
+            animator.SetFloat("14WaveValue6", waveValue[6]);
+        }
+        if (_currentKeyIndex == 14) {
+            animator.SetFloat("15WaveValue0", waveValue[0]);
+            animator.SetFloat("15WaveValue1", waveValue[1]);
+            animator.SetFloat("15WaveValue2", waveValue[2]);
+            animator.SetFloat("15WaveValue3", waveValue[3]);
+            animator.SetFloat("15WaveValue4", waveValue[4]);
+            animator.SetFloat("15WaveValue5", waveValue[5]);
+            animator.SetFloat("15WaveValue6", waveValue[6]);
+        }
     }
-
 }
