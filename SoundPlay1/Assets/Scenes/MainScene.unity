@@ -195,6 +195,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 66194909}
+  zoneValues: {fileID: 11400000, guid: f5f26e0cea3960a41bd34f6fa17cd4f8, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 1506523961}
   zoneActive: 0
@@ -210,17 +211,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &66194909
 AudioSource:
   m_ObjectHideFlags: 0
@@ -448,6 +441,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 93800054}
+  zoneValues: {fileID: 11400000, guid: e52af56435ba20641a692b128caea61f, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 86070275}
   zoneActive: 0
@@ -463,17 +457,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &93800054
 AudioSource:
   m_ObjectHideFlags: 0
@@ -619,6 +605,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 163115576}
+  zoneValues: {fileID: 11400000, guid: 7beea49c7a9613145aef7c007843410f, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 881351044}
   zoneActive: 0
@@ -634,17 +621,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &163115576
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1156,6 +1135,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 506649799}
+  zoneValues: {fileID: 11400000, guid: 9bbb71f248d53124fb318fa995d3fc46, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 1908777837}
   zoneActive: 0
@@ -1171,17 +1151,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &506649799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1350,6 +1322,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 515032563}
+  zoneValues: {fileID: 11400000, guid: 543314b5a033d69449ce3f96f4e814cb, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 292006126}
   zoneActive: 0
@@ -1365,17 +1338,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &515032563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1544,6 +1509,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 587999802}
+  zoneValues: {fileID: 11400000, guid: b8da18257358c584e81b80ad752f2cf9, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 690853058}
   zoneActive: 0
@@ -1559,17 +1525,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &587999802
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1797,6 +1755,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 654317612}
+  zoneValues: {fileID: 11400000, guid: ec3b3bb77510d7b48b5fc1aae01a4a37, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 1810690944}
   zoneActive: 0
@@ -1812,17 +1771,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &654317612
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2339,6 +2290,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 881805225}
+  zoneValues: {fileID: 11400000, guid: df7ef33971274384dbd9314995a4a1b7, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 1870329778}
   zoneActive: 0
@@ -2354,17 +2306,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &881805225
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2973,6 +2917,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 1347296247}
+  zoneValues: {fileID: 11400000, guid: 735707d6072b65e4cab89ea325eb2185, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 697885418}
   zoneActive: 0
@@ -2988,17 +2933,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &1347296247
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3464,6 +3401,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 1623631645}
+  zoneValues: {fileID: 11400000, guid: b5a923b8e7f3e8c4cbe2443298e2d36d, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 2127264234}
   zoneActive: 0
@@ -3479,17 +3417,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &1623631645
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4275,6 +4205,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 1977153184}
+  zoneValues: {fileID: 11400000, guid: de9755e412d619f4694e954f0a5629c6, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 1196217514}
   zoneActive: 0
@@ -4290,17 +4221,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &1977153184
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4469,6 +4392,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 1987436965}
+  zoneValues: {fileID: 11400000, guid: 6495560bc6875b048bdb24c0e6570dd1, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 1800081275}
   zoneActive: 0
@@ -4484,17 +4408,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &1987436965
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4663,6 +4579,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 2007533710}
+  zoneValues: {fileID: 11400000, guid: bf11af867d00e704e9d674dd6cc00ab0, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 635669429}
   zoneActive: 0
@@ -4678,17 +4595,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &2007533710
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4925,6 +4834,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 2056473635}
+  zoneValues: {fileID: 11400000, guid: 7b80462a741a2734795932d686ef636c, type: 2}
   rhythmic: 1
   zoneTrigger: {fileID: 181953317}
   zoneActive: 0
@@ -4940,17 +4850,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &2056473635
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5181,6 +5083,7 @@ MonoBehaviour:
   midiInputManager: {fileID: 1587424115}
   animator: {fileID: 307853273}
   audioSource: {fileID: 2116128132}
+  zoneValues: {fileID: 11400000, guid: 96e97b6d0d6cbe54e8710b77bf6e5312, type: 2}
   rhythmic: 0
   zoneTrigger: {fileID: 1483669946}
   zoneActive: 0
@@ -5196,17 +5099,9 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 30
-  knobMultiplier6: 30
-  knobMultiplier7: 30
-  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 1
-  knobMultiplier14: 1
-  knobMultiplier15: 1
-  knobMultiplier16: 1
 --- !u!82 &2116128132
 AudioSource:
   m_ObjectHideFlags: 0
