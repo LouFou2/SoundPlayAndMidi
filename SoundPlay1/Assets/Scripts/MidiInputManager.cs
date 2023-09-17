@@ -53,20 +53,20 @@ public class MidiInputManager : MonoBehaviour
 
 
     //== Values of the inputs==//
-    public float _midiKnob2Value = 0.5f;
-    public float _midiKnob3Value = 0.5f;
-    public float _midiKnob4Value = 0.5f;
-    public float _midiKnob5Value = 0.5f;
-    public float _midiKnob6Value = 0.5f;
-    public float _midiKnob7Value = 0.5f;
-    public float _midiKnob8Value = 0.5f;
-    public float _midiKnob10Value = 0.5f;
-    public float _midiKnob11Value = 0.5f;
-    public float _midiKnob12Value = 0.5f;
-    public float _midiKnob13Value = 0.5f;
-    public float _midiKnob14Value = 0.5f;
-    public float _midiKnob15Value = 0.5f;
-    public float _midiKnob16Value = 0.5f;
+    public float _midiKnob2Value = 0f;
+    public float _midiKnob3Value = 0f;
+    public float _midiKnob4Value = 0f;
+    public float _midiKnob5Value = 0f;
+    public float _midiKnob6Value = 0f;
+    public float _midiKnob7Value = 0f;
+    public float _midiKnob8Value = 0f;
+    public float _midiKnob10Value = 0f;
+    public float _midiKnob11Value = 0f;
+    public float _midiKnob12Value = 0f;
+    public float _midiKnob13Value = 0f;
+    public float _midiKnob14Value = 0f;
+    public float _midiKnob15Value = 0f;
+    public float _midiKnob16Value = 0f;
     public float _midiPad1Value = 0f;
     public float _midiPad2Value = 0f;
     public float _midiPad3Value = 0f;

@@ -232,8 +232,10 @@ MonoBehaviour:
   animator: {fileID: 307853273}
   audioSource: {fileID: 163115576}
   rhythmic: 1
+  defaultVolume: 1
   volumeMin: 0.3
   volumeMax: 1
+  defaultPitch: 1
   pitchMin: 0.5
   pitchMax: 1.5
   waveValue: []
@@ -242,17 +244,17 @@ MonoBehaviour:
   knobMultiplier2: 30
   knobMultiplier3: 30
   knobMultiplier4: 30
-  knobMultiplier5: 0
-  knobMultiplier6: 0
-  knobMultiplier7: 0
-  knobMultiplier8: 0
+  knobMultiplier5: 30
+  knobMultiplier6: 30
+  knobMultiplier7: 30
+  knobMultiplier8: 30
   knobMultiplier10: 1
   knobMultiplier11: 1
   knobMultiplier12: 3
-  knobMultiplier13: 0
-  knobMultiplier14: 0
-  knobMultiplier15: 0
-  knobMultiplier16: 0
+  knobMultiplier13: 1
+  knobMultiplier14: 1
+  knobMultiplier15: 1
+  knobMultiplier16: 1
   zoneTrigger: {fileID: 881351044}
   zoneActive: 0
 --- !u!82 &163115576
@@ -1799,20 +1801,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actions: {fileID: -944628639613478452, guid: 732295b775ebab642bb7599826b2790a, type: 3}
-  _midiKnob2Value: 0.5
-  _midiKnob3Value: 0.5
-  _midiKnob4Value: 0.5
-  _midiKnob5Value: 0.5
-  _midiKnob6Value: 0.5
-  _midiKnob7Value: 0.5
-  _midiKnob8Value: 0.5
-  _midiKnob10Value: 0.5
-  _midiKnob11Value: 0.5
-  _midiKnob12Value: 0.5
-  _midiKnob13Value: 0.5
-  _midiKnob14Value: 0.5
-  _midiKnob15Value: 0.5
-  _midiKnob16Value: 0.5
+  _midiKnob2Value: 0
+  _midiKnob3Value: 0
+  _midiKnob4Value: 0
+  _midiKnob5Value: 0
+  _midiKnob6Value: 0
+  _midiKnob7Value: 0
+  _midiKnob8Value: 0
+  _midiKnob10Value: 0
+  _midiKnob11Value: 0
+  _midiKnob12Value: 0
+  _midiKnob13Value: 0
+  _midiKnob14Value: 0
+  _midiKnob15Value: 0
+  _midiKnob16Value: 0
   _midiPad1Value: 0
   _midiPad2Value: 0
   _midiPad3Value: 0

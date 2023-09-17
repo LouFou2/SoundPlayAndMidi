@@ -23,8 +23,8 @@ public class SoundAnimTweaker : MonoBehaviour
     public float[] waveValue;
     [SerializeField] private float[] waveFrequency;
     [SerializeField] private float[] waveAmplitude;
-    private float[] initialWaveFrequency;
-    private float[] initialWaveAmplitude;
+    private float[] previousWaveFrequency;
+    private float[] previousWaveAmplitude;
 
     [SerializeField][Range(1f, 30f)] private float knobMultiplier2 = 1f; // set ranges that each knob (0-1 value) will actually use
     [SerializeField][Range(1f, 30f)] private float knobMultiplier3 = 1f;
@@ -51,8 +51,8 @@ public class SoundAnimTweaker : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        audioSource.volume = 1;
-        audioSource.pitch = 1;
+        audioSource.volume = defaultVolume;
+        audioSource.pitch = defaultPitch;
 
         if (rhythmic)
         {
@@ -68,8 +68,8 @@ public class SoundAnimTweaker : MonoBehaviour
         waveFrequency = new float[knobCount];
         waveAmplitude = new float[knobCount];
 
-        initialWaveFrequency = new float[knobCount];
-        initialWaveAmplitude = new float[knobCount];
+        previousWaveFrequency = new float[knobCount];
+        previousWaveAmplitude = new float[knobCount];
 
 
         if (midiInputManager != null)
@@ -77,10 +77,10 @@ public class SoundAnimTweaker : MonoBehaviour
             for (int i = 0; i < waveValue.Length; i++)
             {
                 // Assign MIDI knob values directly from the MidiInputManager
-                initialWaveFrequency[i] = GetKnobFrequency(i);
-                Debug.Log(initialWaveFrequency[i]);
-                initialWaveAmplitude[i] = GetKnobAmplitude(i);
-                Debug.Log(initialWaveAmplitude[i]);
+                previousWaveFrequency[i] = GetKnobFrequency(i);
+                Debug.Log("Initial Frequency " + i + ": " + previousWaveFrequency[i]);
+                previousWaveAmplitude[i] = GetKnobAmplitude(i);
+                Debug.Log("Initial Amplitude " + i + ": " + previousWaveAmplitude[i]);
             }
             
             _currentKeyIndex = -1;
@@ -102,12 +102,42 @@ public class SoundAnimTweaker : MonoBehaviour
                 // Check if the zone is active before modifying knob-related values
                 if (zoneActive)
                 {
-                    // Assign MIDI knob values directly from the MidiInputManager
-                    waveFrequency[i] = GetKnobFrequency(i);
-                    waveAmplitude[i] = GetKnobAmplitude(i);
+                    /*waveFrequency[i] = GetKnobFrequency(i);
+                    waveAmplitude[i] = GetKnobAmplitude(i);*/
+
+                    // Get the current knob values
+                    float currentFrequency = GetKnobFrequency(i);
+                    float currentAmplitude = GetKnobAmplitude(i);
+
+                    // Check if the knob values have changed
+                    if (currentFrequency != previousWaveFrequency[i])
+                    {
+                        // Knob value has changed, use the current value
+                        waveFrequency[i] = currentFrequency;
+                    }
+                    else
+                    {
+                        // Knob value has not changed, use a default value
+                        waveFrequency[i] = 1.0f; // Adjust the default value as needed
+                    }
+
+                    if (currentAmplitude != previousWaveAmplitude[i])
+                    {
+                        // Knob value has changed, use the current value
+                        waveAmplitude[i] = currentAmplitude;
+                    }
+                    else
+                    {
+                        // Knob value has not changed, use a default value
+                        waveAmplitude[i] = 1.0f; // Adjust the default value as needed
+                    }
+
                 }
+                Debug.Log("Frequency knob" + i + ":" + waveFrequency[i]);
+                Debug.Log("Amplitude knob" + i + ":" + waveAmplitude[i]);
 
                 waveValue[i] = GenerateSineWave(waveAmplitude[i], waveFrequency[i]);
+                //Debug.Log("waveValue" + i + ": " + waveValue[i]);
             }
             
             if (rhythmic) 
@@ -171,6 +201,7 @@ public class SoundAnimTweaker : MonoBehaviour
     }
     float GenerateSineWave(float amplitude, float frequency)
     {
+        //Debug.Log("Amp: " + amplitude + "Freq: " +  frequency);
         return amplitude * Mathf.Sin(frequency * Time.time);
     }
 
@@ -193,27 +224,14 @@ public class SoundAnimTweaker : MonoBehaviour
     }
     void ModulateSound() 
     {
-        if (waveFrequency[1] == initialWaveFrequency[1]) 
-        { 
-            audioSource.volume = defaultVolume; 
-        }
-        else if (waveFrequency[1] != initialWaveFrequency[1])
-        {
-            float volumeRange = volumeMax - volumeMin;
-            float moddedVolumeRange = volumeRange * Mathf.Abs(waveValue[1]); // had to keep it between 0 and 1
-            audioSource.volume = moddedVolumeRange;
-        }
+        float volumeRange = volumeMax - volumeMin;
+        float moddedVolumeRange = volumeRange * Mathf.Abs(waveValue[1]); // had to keep it between 0 and 1
+        audioSource.volume = moddedVolumeRange;
 
-        if (waveAmplitude[1] == initialWaveAmplitude[1]) 
-        {
-            audioSource.pitch = defaultPitch;
-        }
-        else if (waveAmplitude[2] != initialWaveAmplitude[2])
-        {
-            float pitchRange = pitchMax - pitchMin;
-            float moddedPitchRange = pitchRange * Mathf.Abs(waveValue[2]); // same
-            audioSource.pitch = moddedPitchRange; 
-        }
+        float pitchRange = pitchMax - pitchMin;
+        float moddedPitchRange = pitchRange * Mathf.Abs(waveValue[2]); // same
+        audioSource.pitch = moddedPitchRange;
+
     }
     void AudioPlay() 
     {
