@@ -13,6 +13,10 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private bool rhythmic = false;
     private bool triggerBufferOn = false;
 
+    //== Will use triggers for each Scanlight Zone (unique zones of sound and animation) ==//
+    [SerializeField] private TriggerController zoneTrigger; // Have to assign in inspector
+    [SerializeField] private bool zoneActive = false;
+
     [SerializeField] private float defaultVolume = 1f; // Set these values in inspector for what works best
     [SerializeField] private float volumeMin = 0.3f; 
     [SerializeField] private float volumeMax = 1f;
@@ -25,6 +29,8 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private float[] waveAmplitude;
     private float[] previousWaveFrequency;
     private float[] previousWaveAmplitude;
+    private bool[] frequencyHasChanged;
+    private bool[] amplitudeHasChanged;
 
     [SerializeField][Range(1f, 30f)] private float knobMultiplier2 = 1f; // set ranges that each knob (0-1 value) will actually use
     [SerializeField][Range(1f, 30f)] private float knobMultiplier3 = 1f;
@@ -40,10 +46,6 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField][Range(0.01f, 3f)] private float knobMultiplier14 = 1f;
     [SerializeField][Range(0.01f, 3f)] private float knobMultiplier15 = 1f;
     [SerializeField][Range(0.01f, 3f)] private float knobMultiplier16 = 1f;
-
-    //== Will use triggers for each Scanlight Zone (unique zones of sound and animation) ==//
-    [SerializeField] private TriggerController zoneTrigger; // Have to assign in inspector
-    [SerializeField] private bool zoneActive = false;
 
     // private int knobIndex = -1; // might need this later
     private int _currentKeyIndex =-1;
@@ -71,6 +73,8 @@ public class SoundAnimTweaker : MonoBehaviour
         previousWaveFrequency = new float[knobCount];
         previousWaveAmplitude = new float[knobCount];
 
+        frequencyHasChanged = new bool[waveValue.Length];
+        amplitudeHasChanged = new bool[waveValue.Length];
 
         if (midiInputManager != null)
         {
@@ -89,7 +93,7 @@ public class SoundAnimTweaker : MonoBehaviour
 
     void Update()
     {
-        GetKeyIndex();
+        _currentKeyIndex = GetKeyIndex();
 
         if (zoneTrigger != null && zoneTrigger.isTriggered) { zoneActive = true; }
         else if (zoneTrigger != null && !zoneTrigger.isTriggered) { zoneActive = false; }
@@ -102,15 +106,20 @@ public class SoundAnimTweaker : MonoBehaviour
                 // Check if the zone is active before modifying knob-related values
                 if (zoneActive)
                 {
-                    /*waveFrequency[i] = GetKnobFrequency(i);
-                    waveAmplitude[i] = GetKnobAmplitude(i);*/
-
                     // Get the current knob values
                     float currentFrequency = GetKnobFrequency(i);
                     float currentAmplitude = GetKnobAmplitude(i);
 
+                    if (currentFrequency != previousWaveFrequency[i] && !frequencyHasChanged[i]) 
+                    {
+                        frequencyHasChanged[i] = true;
+                    }
+                    if (currentAmplitude != previousWaveAmplitude[i] && !amplitudeHasChanged[i])
+                    {
+                        amplitudeHasChanged[i] = true;
+                    }
                     // Check if the knob values have changed
-                    if (currentFrequency != previousWaveFrequency[i])
+                    if (frequencyHasChanged[i])
                     {
                         // Knob value has changed, use the current value
                         waveFrequency[i] = currentFrequency;
@@ -121,7 +130,7 @@ public class SoundAnimTweaker : MonoBehaviour
                         waveFrequency[i] = 1.0f; // Adjust the default value as needed
                     }
 
-                    if (currentAmplitude != previousWaveAmplitude[i])
+                    if (amplitudeHasChanged[i])
                     {
                         // Knob value has changed, use the current value
                         waveAmplitude[i] = currentAmplitude;
@@ -133,8 +142,8 @@ public class SoundAnimTweaker : MonoBehaviour
                     }
 
                 }
-                Debug.Log("Frequency knob" + i + ":" + waveFrequency[i]);
-                Debug.Log("Amplitude knob" + i + ":" + waveAmplitude[i]);
+                //Debug.Log("Frequency knob" + i + ":" + waveFrequency[i]);
+                //Debug.Log("Amplitude knob" + i + ":" + waveAmplitude[i]);
 
                 waveValue[i] = GenerateSineWave(waveAmplitude[i], waveFrequency[i]);
                 //Debug.Log("waveValue" + i + ": " + waveValue[i]);
@@ -144,12 +153,17 @@ public class SoundAnimTweaker : MonoBehaviour
             {
                 DoRhythmicSound(); 
             }
+            else if (!rhythmic && !audioSource.isPlaying) 
+            {
+                audioSource.Play();
+            }
             ModulateSound();
             PassAnimValues();
         }
     }
     private int GetKeyIndex() 
     {
+        Debug.Log(midiInputManager.currentKeyIndex);
         return midiInputManager.currentKeyIndex;
     }
     // Method to get knob frequency value by index
@@ -209,7 +223,7 @@ public class SoundAnimTweaker : MonoBehaviour
     {
         
         float triggerThreshold = waveAmplitude[0] * 0.98f; // Multiply Amplitude with appropriate factor to get a buffer threshold
-        if(midiInputManager._midiKnob2Value == 0) { triggerBufferOn = true; } // just a hacky way I stopped it from playing once at the start
+        //if(midiInputManager._midiKnob2Value == 0) { triggerBufferOn = true; } // just a hacky way I stopped it from playing once at the start
         // Check if waveValue[0] crosses the trigger threshold
         if ((waveValue[0] <= -triggerThreshold || waveValue[0] >= triggerThreshold) && !triggerBufferOn) 
         {
