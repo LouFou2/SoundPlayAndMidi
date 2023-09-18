@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Foot1
+  m_Name: vol_A3_plus1
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -22,7 +22,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -32,8 +32,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: blendShape.FootFlex_R
-    path: GEO-body_female_stylized.001
+    attribute: material._Color.r
+    path: FreqBodySplit/FreqBody.A3
     classID: 137
     script: {fileID: 0}
   - curve:
@@ -41,7 +41,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -51,8 +51,46 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: blendShape.FootCrunch_L
-    path: GEO-body_female_stylized.001
+    attribute: material._Color.g
+    path: FreqBodySplit/FreqBody.A3
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: FreqBodySplit/FreqBody.A3
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: FreqBodySplit/FreqBody.A3
     classID: 137
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -64,18 +102,32 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1278238928
-      attribute: 2307337068
+      path: 2860696189
+      attribute: 1303350129
       script: {fileID: 0}
       typeID: 137
-      customType: 20
+      customType: 22
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1278238928
-      attribute: 1712497826
+      path: 2860696189
+      attribute: 1571785585
       script: {fileID: 0}
       typeID: 137
-      customType: 20
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2860696189
+      attribute: 1840221041
+      script: {fileID: 0}
+      typeID: 137
+      customType: 22
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 2860696189
+      attribute: 2108656497
+      script: {fileID: 0}
+      typeID: 137
+      customType: 22
       isPPtrCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
@@ -104,7 +156,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -114,8 +166,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: blendShape.FootFlex_R
-    path: GEO-body_female_stylized.001
+    attribute: material._Color.r
+    path: FreqBodySplit/FreqBody.A3
     classID: 137
     script: {fileID: 0}
   - curve:
@@ -123,7 +175,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 100
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -133,8 +185,46 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: blendShape.FootCrunch_L
-    path: GEO-body_female_stylized.001
+    attribute: material._Color.g
+    path: FreqBodySplit/FreqBody.A3
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.b
+    path: FreqBodySplit/FreqBody.A3
+    classID: 137
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: material._Color.a
+    path: FreqBodySplit/FreqBody.A3
     classID: 137
     script: {fileID: 0}
   m_EulerEditorCurves: []
