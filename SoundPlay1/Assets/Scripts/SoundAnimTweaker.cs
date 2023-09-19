@@ -45,6 +45,14 @@ public class SoundAnimTweaker : MonoBehaviour
     // private int knobIndex = -1; // might need this later
     private int _currentKeyIndex =-1;
 
+    private void Awake()
+    {
+        for (int i = 0; i < zoneValues.waveValue.Length; i++)
+        {
+            zoneValues.waveFrequency[i] = 0;
+            zoneValues.waveAmplitude[i] = 0;
+        }
+    }
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -81,21 +89,24 @@ public class SoundAnimTweaker : MonoBehaviour
                 previousWaveAmplitude[i] = GetKnobAmplitude(i);
                 Debug.Log("Initial Amplitude " + i + ": " + previousWaveAmplitude[i]);
             }
-            
-            _currentKeyIndex = -1;
         }
-}
+        
+        _currentKeyIndex = -1;
+    }
 
     void Update()
     {
         _currentKeyIndex = GetKeyIndex();
         Debug.Log(_currentKeyIndex);
 
-        if (zoneTrigger != null && zoneTrigger.isTriggered) 
+        if (zoneTrigger != null && zoneTrigger.isTriggered) // First, check which zone is triggered (using colliders)
         {
             zoneActive = true; 
         }
-        else if (zoneTrigger != null && !zoneTrigger.isTriggered) { zoneActive = false; }
+        else if (zoneTrigger != null && !zoneTrigger.isTriggered) 
+        { 
+            zoneActive = false; 
+        }
 
         if (midiInputManager != null) 
         {
@@ -104,7 +115,7 @@ public class SoundAnimTweaker : MonoBehaviour
             {
                 
                 // Check if the zone is active before modifying knob-related values
-                if (zoneActive)
+                if (zoneActive) // will only modify values in active zone
                 {
                     // Get the current knob values
                     float currentFrequency = GetKnobFrequency(i);
@@ -223,11 +234,13 @@ public class SoundAnimTweaker : MonoBehaviour
     void ModulateSound() 
     {
         float volumeRange = volumeMax - volumeMin;
-        float moddedVolumeRange = volumeRange * Mathf.Abs(zoneValues.waveValue[1]); // had to keep it between 0 and 1
+        //float moddedVolumeRange = volumeRange * Mathf.Abs(zoneValues.waveValue[1]); // had to keep it between 0 and 1
+        float moddedVolumeRange = Mathf.Abs(zoneValues.waveValue[1]); // had to keep it between 0 and 1
         audioSource.volume = moddedVolumeRange;
 
         float pitchRange = pitchMax - pitchMin;
-        float moddedPitchRange = pitchRange * Mathf.Abs(zoneValues.waveValue[2]); // same
+        //float moddedPitchRange = pitchRange * Mathf.Abs(zoneValues.waveValue[2]); // same
+        float moddedPitchRange = Mathf.Abs(zoneValues.waveValue[2]); // same
         audioSource.pitch = moddedPitchRange;
 
     }
@@ -245,92 +258,92 @@ public class SoundAnimTweaker : MonoBehaviour
         {
             animator.SetFloat("KeyIndex", 0);
             animator.SetFloat("1WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("1WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("1WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("1WaveValue1", audioSource.volume);
+            animator.SetFloat("1WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 1 && thisObjectIndex == 1) {
             animator.SetFloat("KeyIndex", 1);
             animator.SetFloat("2WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("2WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("2WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("2WaveValue1", audioSource.volume);
+            animator.SetFloat("2WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 2 && thisObjectIndex == 2) {
             animator.SetFloat("KeyIndex", 2);
             animator.SetFloat("3WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("3WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("3WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("3WaveValue1", audioSource.volume);
+            animator.SetFloat("3WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 3 && thisObjectIndex == 3) {
             animator.SetFloat("KeyIndex", 3);
             animator.SetFloat("4WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("4WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("4WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("4WaveValue1", audioSource.volume);
+            animator.SetFloat("4WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 4 && thisObjectIndex == 4) {
             animator.SetFloat("KeyIndex", 4);
             animator.SetFloat("5WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("5WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("5WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("5WaveValue1", audioSource.volume);
+            animator.SetFloat("5WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 5 && thisObjectIndex == 5) {
             animator.SetFloat("KeyIndex", 5);
             animator.SetFloat("6WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("6WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("6WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("6WaveValue1", audioSource.volume);
+            animator.SetFloat("6WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 6 && thisObjectIndex == 6) {
             animator.SetFloat("KeyIndex", 6);
             animator.SetFloat("7WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("7WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("7WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("7WaveValue1", audioSource.volume);
+            animator.SetFloat("7WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 7 && thisObjectIndex == 7) {
             animator.SetFloat("KeyIndex", 7);
             animator.SetFloat("8WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("8WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("8WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("8WaveValue1", audioSource.volume);
+            animator.SetFloat("8WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 8 && thisObjectIndex == 8) {
             animator.SetFloat("KeyIndex", 8);
             animator.SetFloat("9WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("9WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("9WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("9WaveValue1", audioSource.volume);
+            animator.SetFloat("9WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 9 && thisObjectIndex == 9) {
             animator.SetFloat("KeyIndex", 9);
             animator.SetFloat("10WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("10WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("10WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("10WaveValue1", audioSource.volume);
+            animator.SetFloat("10WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 10 && thisObjectIndex == 10) {
             animator.SetFloat("KeyIndex", 10);
             animator.SetFloat("11WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("11WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("11WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("11WaveValue1", audioSource.volume);
+            animator.SetFloat("11WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 11 && thisObjectIndex == 11) {
             animator.SetFloat("KeyIndex", 11);
             animator.SetFloat("12WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("12WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("12WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("12WaveValue1", audioSource.volume);
+            animator.SetFloat("12WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 12 && thisObjectIndex == 12) {
             animator.SetFloat("KeyIndex", 12);
             animator.SetFloat("13WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("13WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("13WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("13WaveValue1", audioSource.volume);
+            animator.SetFloat("13WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 13 && thisObjectIndex == 13) {
             animator.SetFloat("KeyIndex", 13);
             animator.SetFloat("14WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("14WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("14WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("14WaveValue1", audioSource.volume);
+            animator.SetFloat("14WaveValue2", audioSource.pitch);
         }
         if (_currentKeyIndex == 14 && thisObjectIndex == 14) {
             animator.SetFloat("KeyIndex", 14);
             animator.SetFloat("15WaveValue0", zoneValues.waveValue[0]);
-            animator.SetFloat("15WaveValue1", zoneValues.waveValue[1]);
-            animator.SetFloat("15WaveValue2", zoneValues.waveValue[2]);
+            animator.SetFloat("15WaveValue1", audioSource.volume);
+            animator.SetFloat("15WaveValue2", audioSource.pitch);
         }
     }
 }

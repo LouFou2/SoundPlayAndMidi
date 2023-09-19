@@ -204,8 +204,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -451,8 +451,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -616,8 +616,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -836,6 +836,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.22623649
       objectReference: {fileID: 0}
+    - target: {fileID: -9199954674721914516, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -9199954674721914516, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -9199954674721914516, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8684313061111641203, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
       value: FreqBody.F3
@@ -912,6 +924,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.23113999
       objectReference: {fileID: 0}
+    - target: {fileID: -5553964000103940765, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5553964000103940765, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5553964000103940765, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5536570062178296577, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
       value: FreqBody.C5
@@ -952,6 +976,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.236498
       objectReference: {fileID: 0}
+    - target: {fileID: -5318178737779652219, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5318178737779652219, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5318178737779652219, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -5110219745452850417, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
       value: FreqBody.G3
@@ -983,6 +1019,18 @@ PrefabInstance:
     - target: {fileID: -5101397788237671698, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.25856632
+      objectReference: {fileID: 0}
+    - target: {fileID: -5101397788237671698, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5101397788237671698, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5101397788237671698, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4985817878226836471, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
@@ -1024,6 +1072,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.06626668
       objectReference: {fileID: 0}
+    - target: {fileID: -4643330926062675843, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4643330926062675843, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4643330926062675843, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3780167006263017662, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
       value: FreqBody.F4
@@ -1056,6 +1116,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.119765945
       objectReference: {fileID: 0}
+    - target: {fileID: -3749736492585853218, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3749736492585853218, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3749736492585853218, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -3655147031207681103, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -1079,6 +1151,18 @@ PrefabInstance:
     - target: {fileID: -3655147031207681103, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.22434399
+      objectReference: {fileID: 0}
+    - target: {fileID: -3655147031207681103, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -3655147031207681103, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3655147031207681103, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3423951366864925096, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
@@ -1120,6 +1204,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.1978201
       objectReference: {fileID: 0}
+    - target: {fileID: -2282471954884993311, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2282471954884993311, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2282471954884993311, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: -967725339500008224, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -1143,6 +1239,18 @@ PrefabInstance:
     - target: {fileID: -967725339500008224, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.13541973
+      objectReference: {fileID: 0}
+    - target: {fileID: -967725339500008224, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -967725339500008224, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -967725339500008224, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -683559795365545162, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
@@ -1196,6 +1304,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.19869542
       objectReference: {fileID: 0}
+    - target: {fileID: 943235559610308042, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 943235559610308042, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 943235559610308042, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1274980164626462641, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
       value: FreqBody.B3
@@ -1228,6 +1348,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.16178705
       objectReference: {fileID: 0}
+    - target: {fileID: 2980335274367541113, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980335274367541113, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980335274367541113, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4351132471907495191, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -1251,6 +1383,18 @@ PrefabInstance:
     - target: {fileID: 4351132471907495191, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.24715339
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351132471907495191, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351132471907495191, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4351132471907495191, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4518056135921839628, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
@@ -1284,6 +1428,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.16493192
       objectReference: {fileID: 0}
+    - target: {fileID: 4733607979126133092, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733607979126133092, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733607979126133092, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6722342476862330253, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -1308,6 +1464,18 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0.21516141
       objectReference: {fileID: 0}
+    - target: {fileID: 6722342476862330253, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722342476862330253, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722342476862330253, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8010246753824487750, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_DirtyAABB
       value: 0
@@ -1331,6 +1499,18 @@ PrefabInstance:
     - target: {fileID: 8010246753824487750, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0.26863652
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010246753824487750, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010246753824487750, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8010246753824487750, guid: 20de445e431731e4cb571558e55c9007, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8204514033322000366, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
@@ -1684,8 +1864,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -1872,8 +2052,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -2060,8 +2240,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -2307,8 +2487,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -2838,8 +3018,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -3053,7 +3233,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.17275733, y: 0.11885281, z: -0.021004416, w: 0.9775417}
+  m_LocalRotation: {x: 0.17275734, y: 0.118852794, z: -0.021004422, w: 0.9775417}
   m_LocalPosition: {x: 0, y: 1.18, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3157,7 +3337,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030456112}
-  m_LocalRotation: {x: 0.17275733, y: 0.11885281, z: -0.021004416, w: 0.9775417}
+  m_LocalRotation: {x: 0.17275734, y: 0.118852794, z: -0.021004422, w: 0.9775417}
   m_LocalPosition: {x: 0, y: 1.18, z: -2.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3466,8 +3646,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -3951,8 +4131,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -4588,8 +4768,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -4776,8 +4956,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -4964,8 +5144,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -5220,8 +5400,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
@@ -5470,8 +5650,8 @@ MonoBehaviour:
   volumeMin: 0.3
   volumeMax: 1
   defaultPitch: 1
-  pitchMin: 0.5
-  pitchMax: 1.5
+  pitchMin: 0
+  pitchMax: 3
   waveValue: []
   waveFrequency: []
   waveAmplitude: []
