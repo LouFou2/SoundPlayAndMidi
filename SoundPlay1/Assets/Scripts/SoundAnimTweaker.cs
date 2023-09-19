@@ -9,6 +9,7 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private MidiInputManager midiInputManager; //assign in inspector
     [SerializeField] private Animator animator;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private MainScene_UIManager ui_Manager;
     [SerializeField] private ZoneValues zoneValues;
     [SerializeField] private int thisObjectIndex = -1;
     
@@ -34,6 +35,8 @@ public class SoundAnimTweaker : MonoBehaviour
     private float[] previousWaveAmplitude;
     private bool[] frequencyHasChanged;
     private bool[] amplitudeHasChanged;
+
+    [SerializeField] private Color[] uiKeyColor; // Make sure to set this to the right number in Inspector
 
     [SerializeField][Range(1f, 30f)] private float knobMultiplier2 = 1f; // set ranges that each knob (0-1 value) will actually use
     [SerializeField][Range(1f, 30f)] private float knobMultiplier3 = 1f;
@@ -85,9 +88,17 @@ public class SoundAnimTweaker : MonoBehaviour
             {
                 // Assign MIDI knob values directly from the MidiInputManager
                 previousWaveFrequency[i] = GetKnobFrequency(i);
-                Debug.Log("Initial Frequency " + i + ": " + previousWaveFrequency[i]);
                 previousWaveAmplitude[i] = GetKnobAmplitude(i);
-                Debug.Log("Initial Amplitude " + i + ": " + previousWaveAmplitude[i]);
+            }
+        }
+        if( ui_Manager != null) 
+        {
+            int numberOfKeys = ui_Manager.key.Length;
+            uiKeyColor = new Color[numberOfKeys];
+            for (int i = 0; i < numberOfKeys; i++) 
+            {
+                uiKeyColor[i] = new Color(0.5f, 0.5f, 0.5f, 0.14f);
+                Debug.Log("Initialized uiKeyColor[" + i + "] to " + uiKeyColor[i]); // Log the initialization
             }
         }
         
@@ -97,7 +108,6 @@ public class SoundAnimTweaker : MonoBehaviour
     void Update()
     {
         _currentKeyIndex = GetKeyIndex();
-        Debug.Log(_currentKeyIndex);
 
         if (zoneTrigger != null && zoneTrigger.isTriggered) // First, check which zone is triggered (using colliders)
         {
@@ -106,6 +116,14 @@ public class SoundAnimTweaker : MonoBehaviour
         else if (zoneTrigger != null && !zoneTrigger.isTriggered) 
         { 
             zoneActive = false; 
+        }
+        if (ui_Manager != null) // handle the UI key display
+        {
+            for (int i = 0; i < uiKeyColor.Length; i++)
+            {
+                uiKeyColor[i].a = (i == _currentKeyIndex) ? 1f : 0.14f;
+                ui_Manager.key[i].color = uiKeyColor[i];
+            }
         }
 
         if (midiInputManager != null) 
@@ -153,11 +171,15 @@ public class SoundAnimTweaker : MonoBehaviour
                     }
                     zoneValues.waveFrequency[i] = waveFrequency[i];
                     zoneValues.waveAmplitude[i] = waveAmplitude[i];
-                }
 
-                zoneValues.waveValue[i] = GenerateSineWave(zoneValues.waveAmplitude[i], zoneValues.waveFrequency[i]); 
+                    ui_Manager.rhythmValue.text = zoneValues.waveFrequency[0].ToString();
+                    ui_Manager.volFreqValue.text = zoneValues.waveFrequency[1].ToString();
+                    ui_Manager.volAmpValue.text = zoneValues.waveAmplitude[1].ToString();
+                    ui_Manager.pitchFreqValue.text = zoneValues.waveFrequency[2].ToString();
+                    ui_Manager.pitchAmpValue.text = zoneValues.waveAmplitude[2].ToString();
+                }
                 
-                Debug.Log("waveValue" + i + ": " + waveValue[i]); 
+                zoneValues.waveValue[i] = GenerateSineWave(zoneValues.waveAmplitude[i], zoneValues.waveFrequency[i]); 
             }
             
             if (rhythmic) 
@@ -198,7 +220,7 @@ public class SoundAnimTweaker : MonoBehaviour
         switch (knobIndex)
         {
             case 0:
-                return midiInputManager._midiKnob10Value * knobMultiplier10;
+                return 1f;
             case 1:
                 return midiInputManager._midiKnob11Value * knobMultiplier11;
             case 2:
@@ -210,7 +232,6 @@ public class SoundAnimTweaker : MonoBehaviour
 
     float GenerateSineWave(float amplitude, float frequency)
     {
-        //Debug.Log("Amp: " + amplitude + "Freq: " +  frequency);
         return amplitude * Mathf.Sin(frequency * Time.time);
     }
 
@@ -218,17 +239,23 @@ public class SoundAnimTweaker : MonoBehaviour
     {
         
         float triggerThreshold = zoneValues.waveAmplitude[0] * 0.98f; // Multiply Amplitude with appropriate factor to get a buffer threshold
-        
+        float waveValueAlpha = Mathf.Abs(zoneValues.waveValue[0] * 0.6f);
+
         // Check if waveValue[0] crosses the trigger threshold
         if ((zoneValues.waveValue[0] <= -triggerThreshold || zoneValues.waveValue[0] >= triggerThreshold) && !triggerBufferOn) 
         {
             triggerBufferOn = true; // ensure that audio doesnt get triggered every next update
             AudioPlay();
+            if (thisObjectIndex == _currentKeyIndex) 
+            {
+                ui_Manager.button2Image.color = new Color(1f,1f,1f);
+            }
         }
         // Check if waveValue[0] returns to within the threshold range
         if (zoneValues.waveValue[0] > -triggerThreshold && zoneValues.waveValue[0] < triggerThreshold) 
         {
             triggerBufferOn = false;
+            if (thisObjectIndex == _currentKeyIndex) { ui_Manager.button2Image.color = new Color(1f, 1f, 1f, waveValueAlpha); }
         }
     }
     void ModulateSound() 
@@ -253,7 +280,6 @@ public class SoundAnimTweaker : MonoBehaviour
     void PassAnimValues()
     {
         if (_currentKeyIndex == -1) { return; }
-        Debug.Log("Passing Anim Values...");
         if (_currentKeyIndex == 0 && thisObjectIndex == 0) 
         {
             animator.SetFloat("KeyIndex", 0);
