@@ -197,7 +197,7 @@ MonoBehaviour:
   audioSource: {fileID: 66194909}
   zoneValues: {fileID: 11400000, guid: f5f26e0cea3960a41bd34f6fa17cd4f8, type: 2}
   thisObjectIndex: 14
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 1506523961}
   zoneActive: 0
   defaultVolume: 1
@@ -444,7 +444,7 @@ MonoBehaviour:
   audioSource: {fileID: 93800054}
   zoneValues: {fileID: 11400000, guid: e52af56435ba20641a692b128caea61f, type: 2}
   thisObjectIndex: 5
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 86070275}
   zoneActive: 0
   defaultVolume: 1
@@ -1510,7 +1510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8010246753824487750, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[1]
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8204514033322000366, guid: 20de445e431731e4cb571558e55c9007, type: 3}
       propertyPath: m_Name
@@ -2045,7 +2045,7 @@ MonoBehaviour:
   audioSource: {fileID: 515032563}
   zoneValues: {fileID: 11400000, guid: 543314b5a033d69449ce3f96f4e814cb, type: 2}
   thisObjectIndex: 8
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 292006126}
   zoneActive: 0
   defaultVolume: 1
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   audioSource: {fileID: 587999802}
   zoneValues: {fileID: 11400000, guid: b8da18257358c584e81b80ad752f2cf9, type: 2}
   thisObjectIndex: 4
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 690853058}
   zoneActive: 0
   defaultVolume: 1
@@ -3639,7 +3639,7 @@ MonoBehaviour:
   audioSource: {fileID: 1347296247}
   zoneValues: {fileID: 11400000, guid: 735707d6072b65e4cab89ea325eb2185, type: 2}
   thisObjectIndex: 7
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 697885418}
   zoneActive: 0
   defaultVolume: 1
@@ -4949,7 +4949,7 @@ MonoBehaviour:
   audioSource: {fileID: 1987436965}
   zoneValues: {fileID: 11400000, guid: 6495560bc6875b048bdb24c0e6570dd1, type: 2}
   thisObjectIndex: 13
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 1800081275}
   zoneActive: 0
   defaultVolume: 1
@@ -5137,7 +5137,7 @@ MonoBehaviour:
   audioSource: {fileID: 2007533710}
   zoneValues: {fileID: 11400000, guid: bf11af867d00e704e9d674dd6cc00ab0, type: 2}
   thisObjectIndex: 6
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 635669429}
   zoneActive: 0
   defaultVolume: 1
@@ -5643,7 +5643,7 @@ MonoBehaviour:
   audioSource: {fileID: 2116128132}
   zoneValues: {fileID: 11400000, guid: 96e97b6d0d6cbe54e8710b77bf6e5312, type: 2}
   thisObjectIndex: 9
-  rhythmic: 0
+  rhythmic: 1
   zoneTrigger: {fileID: 1483669946}
   zoneActive: 0
   defaultVolume: 1
