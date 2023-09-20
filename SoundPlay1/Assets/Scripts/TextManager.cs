@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -16,7 +16,7 @@ public class TextManager : MonoBehaviour
     private int keysPressed = -1;
 
     private bool textHasStarted = false;
-    private bool textHasFinished = false;
+    public bool introSceneFinished = false;
     void Start()
     {
         keysPressed = -1;
@@ -38,7 +38,7 @@ public class TextManager : MonoBehaviour
             }
         }
         // When at least 3 keys have been pressed, start the text display coroutine
-        if (keysPressed >= 3 && !textHasStarted && !textHasFinished) 
+        if (keysPressed >= 3 && !textHasStarted && !introSceneFinished) 
         {
             StartCoroutine(TextDisplayCoroutine());
             //Debug.Log("Scene can start");
@@ -50,17 +50,34 @@ public class TextManager : MonoBehaviour
     {
         textHasStarted = true;
         // Here, you can define the text and delays as needed
-        yield return new WaitForSeconds(2.0f); // Wait for 1 second
-        textMeshPro.text = "Line 1 of text";
-
-        yield return new WaitForSeconds(2.0f); // Wait for 2 seconds
-        textMeshPro.text = "Line 2 of text";
-
-        // Add more text changes and delays as needed
-
+        yield return new WaitForSeconds(2.0f); 
+        textMeshPro.text = "initialising.";
+        yield return new WaitForSeconds(0.3f); 
+        textMeshPro.text = "initialising..";
+        yield return new WaitForSeconds(0.3f); 
+        textMeshPro.text = "initialising...";
+        yield return new WaitForSeconds(0.3f); 
+        textMeshPro.text = "initialising.";
+        yield return new WaitForSeconds(0.3f); 
+        textMeshPro.text = "initialising..";
+        yield return new WaitForSeconds(0.3f); 
+        textMeshPro.text = "initialising...";
+        yield return new WaitForSeconds(0.3f); // Wait for 2 seconds
+        
+        textMeshPro.text = "refrequaliser";
+        yield return new WaitForSeconds(4.0f);
+        
+        textMeshPro.text = "scan your body";
         yield return new WaitForSeconds(2.0f);
-        textMeshPro.text = "last line of text";
-        textHasFinished = true;
+        textMeshPro.text = "for noise residue from city living";
+        yield return new WaitForSeconds(4.0f);
+        textMeshPro.text = "re-tune";
+        yield return new WaitForSeconds(1.0f);
+        textMeshPro.text = "re-balance";
+        yield return new WaitForSeconds(1.0f);
+        textMeshPro.text = "refrequalise";
+        yield return new WaitForSeconds(3.0f);
+        introSceneFinished = true;
         yield break;
     }
 }

@@ -11,22 +11,14 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private MainScene_UIManager ui_Manager;
     [SerializeField] private ZoneValues zoneValues;
-    [SerializeField] private int thisObjectIndex = -1;
+    [SerializeField] private int thisObjectIndex = -1; // Will check this against the 'currentKeyIndex'
     
     [Header("Rhythmic means looping is not used")]
-    [SerializeField] private bool rhythmic = false;
+    [SerializeField] private bool rhythmic = false; //in this case they are all true, but might want a different implementation in future
     private bool triggerBufferOn = false;
 
-    //== Will use triggers for each Scanlight Zone (unique zones of sound and animation) ==//
-    [SerializeField] private TriggerController zoneTrigger; // Have to assign in inspector
-    [SerializeField] private bool zoneActive = false;
-
     [SerializeField] private float defaultVolume = 1f; // Set these values in inspector for what works best
-    [SerializeField] private float volumeMin = 0.3f; 
-    [SerializeField] private float volumeMax = 1f;
     [SerializeField] private float defaultPitch = 1f;
-    [SerializeField] private float pitchMin = 0.5f;
-    [SerializeField] private float pitchMax = 1.5f;
 
     [SerializeField] private float[] waveValue;
     [SerializeField] private float[] waveFrequency;
@@ -41,12 +33,12 @@ public class SoundAnimTweaker : MonoBehaviour
     [SerializeField][Range(1f, 30f)] private float knobMultiplier2 = 1f; // set ranges that each knob (0-1 value) will actually use
     [SerializeField][Range(1f, 30f)] private float knobMultiplier3 = 1f;
     [SerializeField][Range(1f, 30f)] private float knobMultiplier4 = 1f;
-    [SerializeField][Range(0.01f, 3f)] private float knobMultiplier10 = 1f;
+    //[SerializeField][Range(0.01f, 3f)] private float knobMultiplier10 = 1f; // not using in this case
     [SerializeField][Range(0.01f, 3f)] private float knobMultiplier11 = 1f;
-    [SerializeField][Range(0.01f, 3f)] private float knobMultiplier12 = 1f;
+    [SerializeField][Range(0.01f, 3f)] private float knobMultiplier12 = 3f;
 
-    // private int knobIndex = -1; // might need this later
-    private int _currentKeyIndex =-1;
+    private int _currentKeyIndex =-1;   // Can check this index against thisObjectIndex to set 'zoneActive' bool
+    private bool zoneActive = false;    // Need a bool to isolate current active zone
 
     private void Awake()
     {
@@ -98,7 +90,6 @@ public class SoundAnimTweaker : MonoBehaviour
             for (int i = 0; i < numberOfKeys; i++) 
             {
                 uiKeyColor[i] = new Color(0.5f, 0.5f, 0.5f, 0.14f);
-                Debug.Log("Initialized uiKeyColor[" + i + "] to " + uiKeyColor[i]); // Log the initialization
             }
         }
         
@@ -109,19 +100,13 @@ public class SoundAnimTweaker : MonoBehaviour
     {
         _currentKeyIndex = GetKeyIndex();
 
-        if (zoneTrigger != null && zoneTrigger.isTriggered) // First, check which zone is triggered (using colliders)
-        {
-            zoneActive = true; 
-        }
-        else if (zoneTrigger != null && !zoneTrigger.isTriggered) 
-        { 
-            zoneActive = false; 
-        }
+        zoneActive = (_currentKeyIndex == thisObjectIndex) ? true : false;
+        
         if (ui_Manager != null) // handle the UI key display
         {
             for (int i = 0; i < uiKeyColor.Length; i++)
             {
-                uiKeyColor[i].a = (i == _currentKeyIndex) ? 1f : 0.14f;
+                uiKeyColor[i].a = (i == _currentKeyIndex) ? 1f : 0.14f; // Change alpha of UI image if key is active
                 ui_Manager.key[i].color = uiKeyColor[i];
             }
         }
@@ -220,7 +205,7 @@ public class SoundAnimTweaker : MonoBehaviour
         switch (knobIndex)
         {
             case 0:
-                return 1f;
+                return 1f; // I set a hard value for wave 1 amplitude (cannot be manipulated) - only fot his case, but could change
             case 1:
                 return midiInputManager._midiKnob11Value * knobMultiplier11;
             case 2:
@@ -238,42 +223,39 @@ public class SoundAnimTweaker : MonoBehaviour
     void DoRhythmicSound() 
     {
         
-        float triggerThreshold = zoneValues.waveAmplitude[0] * 0.98f; // Multiply Amplitude with appropriate factor to get a buffer threshold
+        float triggerThreshold = zoneValues.waveAmplitude[0] * 0.98f; // Multiply Amplitude with appropriate factor to get a 'trigger' threshold
         float waveValueAlpha = Mathf.Abs(zoneValues.waveValue[0] * 0.6f);
 
-        // Check if waveValue[0] crosses the trigger threshold
+        // Check if waveValue[0] crosses the 'trigger' threshold
         if ((zoneValues.waveValue[0] <= -triggerThreshold || zoneValues.waveValue[0] >= triggerThreshold) && !triggerBufferOn) 
         {
             triggerBufferOn = true; // ensure that audio doesnt get triggered every next update
             AudioPlay();
+            
             if (thisObjectIndex == _currentKeyIndex) 
             {
-                ui_Manager.button2Image.color = new Color(1f,1f,1f);
+                ui_Manager.button2Image.color = new Color(1f,1f,1f); // the colour of the UI button visually shows the rhythm
             }
         }
         // Check if waveValue[0] returns to within the threshold range
         if (zoneValues.waveValue[0] > -triggerThreshold && zoneValues.waveValue[0] < triggerThreshold) 
         {
             triggerBufferOn = false;
+            
             if (thisObjectIndex == _currentKeyIndex) { ui_Manager.button2Image.color = new Color(1f, 1f, 1f, waveValueAlpha); }
         }
     }
     void ModulateSound() 
     {
-        float volumeRange = volumeMax - volumeMin;
-        //float moddedVolumeRange = volumeRange * Mathf.Abs(zoneValues.waveValue[1]); // had to keep it between 0 and 1
         float moddedVolumeRange = Mathf.Abs(zoneValues.waveValue[1]); // had to keep it between 0 and 1
         audioSource.volume = moddedVolumeRange;
 
-        float pitchRange = pitchMax - pitchMin;
-        //float moddedPitchRange = pitchRange * Mathf.Abs(zoneValues.waveValue[2]); // same
         float moddedPitchRange = Mathf.Abs(zoneValues.waveValue[2]); // same
         audioSource.pitch = moddedPitchRange;
 
     }
     void AudioPlay() 
     {
-        //audioSource.Stop();
         audioSource.Play();
     }
 

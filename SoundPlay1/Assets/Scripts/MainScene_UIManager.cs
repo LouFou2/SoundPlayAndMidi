@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Palmmedia.ReportGenerator.Core.CodeAnalysis;
+//using Palmmedia.ReportGenerator.Core.CodeAnalysis;
 
 public class MainScene_UIManager : MonoBehaviour
 {
